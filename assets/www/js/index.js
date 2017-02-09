@@ -1,49 +1,69 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
-var app = {
-    // Application Constructor
-    initialize: function() {
-        this.bindEvents();
-    },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicity call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+var $$$ = new Framework7({
+    modalTitle: 'JsMobileBasic DOC',
+    // Enable Material theme
+    material: true,
+	// Panels
+    swipePanel: 'left', // or 'left' or 'right'
+    swipePanelActiveArea: 0,
+    swipePanelCloseOpposite: true,
+    swipePanelOnlyClose: false,
+    swipePanelNoFollow: false,
+    swipePanelThreshold: 0,
+    panelsCloseByOutside: true,
+	// Modals
+    modalButtonOk: 'OK',
+    modalButtonCancel: 'Отмена',
+});
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+// Expose Internal DOM library
+var $$ = Dom7;
 
-        console.log('Received Event: ' + id);
-    }
-};
+function error(text){
+	$$$.addNotification({
+            message: 'Ошибка: <red>'+text+'</red>',
+            button: {
+                text: 'Закрыть'
+//                color: 'red'
+            }
+    });
+	log('<b><red>'+text+'</red></b>');
+}
+function warn(text){
+	$$$.addNotification({
+            message: 'Предуприждение: <yellow>'+text+'</yellow>',
+            button: {
+                text: 'Закрыть'
+//                color: 'yellow'
+            }
+    });
+	log('<yellow>'+text+'</yellow>');
+}
+function info(text){
+	$$$.addNotification({
+            message: 'Информация: <blue>'+text+'</blue>',
+            button: {
+                text: 'Закрыть'
+            }
+    });
+	log('<blue>'+text+'</blue>');
+}
+
+console.error = error;
+console.warn = warn;
+console.log = info;
+
+// Add main view
+var mainView = $$$.addView('.view-main', {});
+
+
+/* ===== Change statusbar bg when panel opened/closed ===== */
+$$('.panel-left').on('open', function () {
+    $$('.statusbar-overlay').addClass('with-panel-left');
+});
+$$('.panel-right').on('open', function () {
+    $$('.statusbar-overlay').addClass('with-panel-right');
+});
+$$('.panel-left, .panel-right').on('close', function () {
+    $$('.statusbar-overlay').removeClass('with-panel-left with-panel-right');
+});
+

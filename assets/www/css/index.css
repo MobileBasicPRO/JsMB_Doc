@@ -37,4 +37,7 @@ args{
 pre{
   font-family:sans;
   font-size:1rem;
+  text-overflow: clip;
+  word-break: break-word;
+  white-space: pre;
 }

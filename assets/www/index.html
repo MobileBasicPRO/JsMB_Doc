@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="icon" href="img/icon.png">
   </head>
-  <body class="theme-orange layout-dark">
+  <body onselectstart="return false;" class="theme-orange layout-dark">
     <div class="statusbar-overlay"></div>
     <div class="panel-overlay"></div>
     <div class="panel panel-left panel-cover panel-swipable">
@@ -29,7 +29,7 @@
             <div class="page-content">
               <div class="content-block">
               </div>
-              <div class="content-block-title">Разделы приложения:</div>
+              <div class="content-block-title">Разделы приложен<span class="open-popover">ия:</span></div>
               <div class="list-block">
                 <ul>
 				  <li><a href="about.html" class="item-link close-panel">
@@ -42,8 +42,8 @@
                 </ul>
               </div>
               <div class="content-block">
-                <p><center><a href="http://vk.com/jsmobilebasic">JsMobileBasic</a><br/>
-				  <a href="http://vk.com/prophessor">&copy; PROPHESSOR 2017</a>
+                <p><center><a href="#" onclick="gotoURL('http://vk.com/jsmobilebasic')">JsMobileBasic</a><br/>
+				  <a href="#" onclick="gotoURL('http://vk.com/prophessor')">&copy; PROPHESSOR 2017</a>
 				</center></p>
               </div>
 			  
@@ -81,6 +81,7 @@
                         <div class="item-media"><i class="icon icon-f7"></i></div>
                         <div class="item-inner">
                           <div class="item-title">История развития JsMobileBasic</div>
+                          <div class="item-after"><span class="badge bg-green">NEW</span></div>
                         </div>
                       </div></a></li>
 					</ul>
@@ -92,6 +93,7 @@
                         <div class="item-media"><i class="icon icon-f7"></i></div>
                         <div class="item-inner">
                           <div class="item-title">Графические операторы</div>
+                          <div class="item-after"><span class="badge bg-green">NEW</span></div>
                         </div>
                   </div></a></li>
                 </ul>
@@ -99,19 +101,18 @@
 			  <div class="content-block-title">Дополнительные разделы</div>
               <div class="list-block">
                 <ul>
-                  <li><a href="#" class="item-link">
+                  <li><a href="about.html" class="item-link">
                       <div class="item-content">
                         <div class="item-media"><i class="icon icon-f7"></i></div>
                         <div class="item-inner">
                           <div class="item-title">О программе</div>
                         </div>
                       </div></a></li>
-                  <li><a href="http://vk.com/jsmobilebasic" class="item-link">
+                  <li><a href="#" class="item-link open-popover">
                       <div class="item-content">
                         <div class="item-media"><i class="icon icon-f7"></i></div>
                         <div class="item-inner">
                           <div class="item-title">Группа ВКонтакте</div>
-                          <div class="item-after"><span class="badge bg-green">NEW</span></div>
                         </div>
                       </div></a></li>
 					</ul>
@@ -121,6 +122,30 @@
         </div>
       </div>
     </div>
+<!--POPUP-->
+    <!--Console-->
+	<div class="popup console-popup">
+      <div class="view navbar-fixed">
+        <div class="pages">
+          <div class="page">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="left"><a href="#" class="link close-popup">Закрыть</a></div>
+                <div class="center">Консоль отладки</div>
+              </div>
+            </div>
+            <div class="page-content">
+              <div class="content-block">
+				<div id="console"></div><p><br/></p>
+				<input type="text" id="consoleinput" autofocus placeholder="Eval" style="position:absolute;bottom:38px;width:100%;"/>
+				<a href="#" type="submit" style="position:fixed;bottom:0; width:100%;" class="button button-raised" onclick="t = 'consoleinput';log('$<blue>'+document.getElementById(t).value+'</blue>');eval(document.getElementById('consoleinput').value)">Выполнить</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	
     <div class="popup demo-popup">
       <div class="view navbar-fixed">
         <div class="pages">
@@ -148,7 +173,7 @@
       <div class="popover-inner">
         <div class="list-block">
           <ul>
-            <li><a href="modals.html" class="list-button item-link">Modals</a></li>
+            <li><a href="#" data-popup=".console-popup" class="list-button item-link open-popup close-popover">Консоль отладки</a></li>
             <li><a href="popover.html" class="list-button item-link">Popover</a></li>
             <li><a href="tabs.html" class="list-button item-link">Tabs</a></li>
             <li><a href="panels.html" class="list-button item-link">Side Panels</a></li>

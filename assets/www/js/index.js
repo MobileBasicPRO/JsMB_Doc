@@ -1,5 +1,5 @@
 var $$$ = new Framework7({
-    modalTitle: 'JsMobileBasic DOC',
+    modalTitle: 'JsMB Документация',
     // Enable Material theme
     material: true,
 	// Panels
@@ -18,6 +18,10 @@ var $$$ = new Framework7({
 // Expose Internal DOM library
 var $$ = Dom7;
 
+function log(text){
+	document.getElementById('console').innerHTML += '<orange>#</orange> <red>'+text+'</red><br/>';
+}
+
 function error(text){
 	$$$.addNotification({
             message: 'Ошибка: <red>'+text+'</red>',
@@ -32,7 +36,8 @@ function warn(text){
 	$$$.addNotification({
             message: 'Предуприждение: <yellow>'+text+'</yellow>',
             button: {
-                text: 'Закрыть'
+                text: 'Закрыть',
+				background: 'yellow'
 //                color: 'yellow'
             }
     });
@@ -67,3 +72,9 @@ $$('.panel-left, .panel-right').on('close', function () {
     $$('.statusbar-overlay').removeClass('with-panel-left with-panel-right');
 });
 
+
+function gotoURL(url){
+	$$$.confirm('Сейчас будет открыта интернет страница.<br/>Для возвращения в документацию нажмите кнопку Back.', function(){
+		window.location.href=url;
+	});
+}

@@ -19,9 +19,20 @@ orange{
 purple{
   color:purple;
 }
+cyan{
+  color: Cyan;
+}
+white{
+  color:#fff;
+}
+black{
+  color:#000;
+}
 
 info{
+  display:block;
   color:orange;
+  padding-left:3%;
 }
 
 oper{
@@ -32,6 +43,11 @@ oper{
 args{
   color:#BB00EE;
   font-size:1.5rem;
+}
+
+block{
+  display:block;
+  padding-left:6%;
 }
 
 pre{

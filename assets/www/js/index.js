@@ -89,6 +89,7 @@ function gotoURL(url){
 	var oper = g_oper[0];
 	var args = "("+g_oper[1];
 	var params = g_params.split('\n').join('<br/>');
+    var g_return = (g_return == "true" || g_return == "false") ? "<orange>"+g_return+"</orange>" : g_return;
 	var tmp = "<oper>"+oper+"<args>"+args+"</args></oper><info>Описание:</info><block>"+g_about+"</block><info>Параметры:</info><block>"+params+"</block><info>Возвращаемое значение:</info><block>"+g_return+"</block><info>Пример использования:<block>"+g_example+"</block>";
 	document.getElementById('g_out').value = tmp;
 	log(tmp);

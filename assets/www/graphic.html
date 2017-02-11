@@ -58,8 +58,8 @@
 	  	x1, y1: координаты правого нижнего угла проекции куба, px;<br/>
 	  	q: расстояние между проекциями противоположных граней (глубина куба), px.<br/></block>
 	  <info>Возвращаемое значение:</info> <block><orange>true</orange></block>
-	  <title>Пример использования:</title><block>
-	  	drawCube(10,10,100,100,10);</block>
+	  <info>Пример использования:</info>
+	  <block>drawCube(10,10,100,100,10);</block>
 
 	  <oper>drawLine<args>(x, y, x1, y1)</args></oper>
 
@@ -73,36 +73,36 @@
 	  drawLine(10,10,100,100);</block>
 
 
-	  *drawRect* (x, y, w, h) 
+      <oper>drawRect<args>(x, y, w, h) </args></oper>
 
-	  Описание:~
-	  Рисует прямоугольник, имеющий левый верхний угол в точке с
-	  координатой (x, y) px, шириной w px и высотой h px.
-	  Параметры:~
-	  x, y: координаты левого верхнего угла рисуемого прямоугольника, px;
-	  w: ширина рисуемого прямоугольника, px;
-	  h: высота рисуемого прямоугольника, px;
-	  Возвращаемое значение:~
-	  отсутствует. 
-	  Пример использования:~
-	  drawRect(10,10,100,100);
-
-
+	  <info>Описание:</info>
+	  <block>Рисует прямоугольник, имеющий левый верхний угол в точке с
+	  координатой (x, y) px, шириной w px и высотой h px.</block>
+	  <info>Параметры:</info>
+	  <block>x, y: координаты левого верхнего угла рисуемого прямоугольника, px;<br/>
+	  w: ширина рисуемого прямоугольника, px;<br/>
+	  h: высота рисуемого прямоугольника, px;<br/></block>
+	  <info>Возвращаемое значение:</info>
+	  <block>отсутствует</block>
+	  <info>Пример использования:</info>
+	  <block>drawRect(10,10,100,100);</block>
 
 
 
-	  *drawPlot* (x, y) 
-
-	  Описание:~
-	  Рисует точку с координатой (x,y).
-	  Параметры:~
-	  x, y: координаты рисуемой точки, px.
-	  Возвращаемое значение: отсутствует. 
-	  Пример использования:~
-	  drawPlot(10,100);
 
 
-	  ----------Будет оформлено позже----------
+      <oper>drawPlot<args>(x, y)</args></oper>
+
+	  <info>Описание:</info>
+	  <block>Рисует точку с координатой (x,y).</block>
+	  <info>Параметры:</info>
+	  <block>x, y: координаты рисуемой точки, px.</block>
+	  <info>Возвращаемое значение:</info><block>отсутствует </block>
+	  <info>Пример использования:</info>
+	  <block>drawPlot(10,100);</block>
+
+
+<!--	  ----------Будет оформлено позже------------>
 
 	  <oper>setColor<args>(color)</args></oper>
 	  <info>Описание:</info>
@@ -112,36 +112,36 @@
 	  HEX: '#4c4c4c'<br/>
 	  COLOR: 'red'<br/></block>
 
-	  *fillScreen* (color) - заливает экран указанным цветом/градиентом color
+	  <oper>fillScreen<args>(color)</args></oper><block> - заливает экран указанным цветом/градиентом color</block>
 
-	  *setLineWidth* (width) - задать толщину линий
+	  <oper>setLineWidth<args>(width)</args></oper><block> - задать толщину линий</block>
 
-	  *setFont* (family) - задать шрифт
+	  <oper>setFont<args>(family)</args></oper><block> - задать шрифт</block>
 
-	  *setFontSize* (size) - задать размер шрифта (в px) (кегль)
+	  <oper>setFontSize<args>(size)</args></oper><block> - задать размер шрифта (в px) (кегль)</block>
 
-	  *fillRect* (x,y,w,h) - заливает прямоугольник от x;y с шириной w и высотой h
+	  <oper>fillRect<args>(x,y,w,h)</args></oper><block> - заливает прямоугольник от x;y с шириной w и высотой h</block>
 
-	  *fillArc* (x,y,radius,startAngle, endAngle, drection) - тоже самое, что и drawArc, но залитое
+	  <oper>fillArc<args>(x,y,radius,startAngle, endAngle, drection)</args></oper><block> - тоже самое, что и drawArc, но залитое</block>
 
-	  *drawRect4* (x,y,x1,y1,x2,y2,x3,y3) - рисует 4-хугольник (рамку) по 4-м точкам
+	  <oper>drawRect4<args>(x,y,x1,y1,x2,y2,x3,y3)</args></oper><block> - рисует 4-хугольник (рамку) по 4-м точкам</block>
 
-	  *fillRect4* (x,y,x1,y1,x2,y2,x3,y3) - рисует 4-хугольник (залитый) по 4-м точкам
+	  <oper>fillRect4<args>(x,y,x1,y1,x2,y2,x3,y3)</args></oper><block> - рисует 4-хугольник (залитый) по 4-м точкам</block>
 
-	  *drawTriangle* (x,y,x1,y1,x2,y2) - рисует треугольник по 3-м точкам
+	  <oper>drawTriangle<args>(x,y,x1,y1,x2,y2)</args></oper><block> - рисует треугольник по 3-м точкам</block>
 
-	  *fillTriangle* (x,y,x1,y1,x2,y2) - рисует залитый треугольник по 3-м точкам
+	  <oper>fillTriangle<args>(x,y,x1,y1,x2,y2)</args></oper><block> - рисует залитый треугольник по 3-м точкам</block>
 
-	  *makeLinearGradient* (x,y,x1,y1) - создаёт линейный градиент (подробнее позже)
+	  <oper>makeLinearGradient<args>(x,y,x1,y1)</args></oper><block> - создаёт линейный градиент (подробнее позже)</block>
 
-	  *makeRadialGradient* (x,y,r,x1,y1,r1) - создаёт круговой градиент (подробнее
-	  позже)
+	  <oper>makeRadialGradient<args>(x,y,r,x1,y1,r1)</args></oper><block> - создаёт круговой градиент (подробнее
+	  позже)</block>
 
-	  *setGragientColor* (name, num, color) - задаёт цвет color градиенту name. num -
-	  номер цвета (начиная с 0)
+	  <oper>setGragientColor<args>(name, num, color)</args></oper><block> - задаёт цвет color градиенту name. num -
+	  номер цвета (начиная с 0)</block>
 
-	  *makeTexture* (url,repetion) - создаёт текстуру url с повторением
-	  (repeat/no-repeat/repeat-x/repeat-y)
+      <oper>makeTexture<args>(url,repetion)</args></oper><block> - создаёт текстуру url с повторением
+	  (repeat/no-repeat/repeat-x/repeat-y)</block>
 <!--/pre-->	  
     </div>
   </div>

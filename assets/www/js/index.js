@@ -80,7 +80,7 @@ function gotoURL(url){
 }
 
 
-  function g_mail(){
+  function g_main(){
 	var g_oper = document.getElementById('g_operator').value.split('(');
 	var g_about = document.getElementById('g_about').value;
 	var g_params = document.getElementById('g_params').value;

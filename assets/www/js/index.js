@@ -55,7 +55,7 @@ function info(text){
 
 console.error = error;
 console.warn = warn;
-console.log = info;
+//console.log = info;
 
 // Add main view
 var mainView = $$$.addView('.view-main', {});
@@ -65,11 +65,8 @@ var mainView = $$$.addView('.view-main', {});
 $$('.panel-left').on('open', function () {
     $$('.statusbar-overlay').addClass('with-panel-left');
 });
-$$('.panel-right').on('open', function () {
-    $$('.statusbar-overlay').addClass('with-panel-right');
-});
-$$('.panel-left, .panel-right').on('close', function () {
-    $$('.statusbar-overlay').removeClass('with-panel-left with-panel-right');
+$$('.panel-left,').on('close', function () {
+    $$('.statusbar-overlay').removeClass('with-panel-left');
 });
 
 

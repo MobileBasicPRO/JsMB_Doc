@@ -57,3 +57,7 @@ pre{
   word-break: break-word;
   white-space: pre;
 }
+
+t{
+  text-decoration:underline;
+}

@@ -43,7 +43,7 @@
 	  	direction (необязательно): направление рисования дуги.<br/></block>
 	  <info>Возвращаемое значение:</info> <block><orange>true</orange></block>
 	  <info>Пример использования:</info>
- <block>drawArc(100,100,10);//круг с центром в точке (100,100) и радусом 10 px.
+ <block>drawArc(100,100,10);//круг с центром в точке (100,100) и радусом 10 px.<br/>
 	  	drawArc(100,100,10,PI,0);//нижний полукруг с центром в точке (100,100) и радиусом 10 px.</block>
 
 
@@ -74,7 +74,7 @@
 
 
       <oper>drawRect<args>(x, y, w, h) </args></oper>
-
+	  
 	  <info>Описание:</info>
 	  <block>Рисует прямоугольник, имеющий левый верхний угол в точке с
 	  координатой (x, y) px, шириной w px и высотой h px.</block>
@@ -87,12 +87,9 @@
 	  <info>Пример использования:</info>
 	  <block>drawRect(10,10,100,100);</block>
 
-
-
-
-
+	  
       <oper>drawPlot<args>(x, y)</args></oper>
-
+	  
 	  <info>Описание:</info>
 	  <block>Рисует точку с координатой (x,y).</block>
 	  <info>Параметры:</info>
@@ -101,47 +98,214 @@
 	  <info>Пример использования:</info>
 	  <block>drawPlot(10,100);</block>
 
-
-<!--	  ----------Будет оформлено позже------------>
-
+	  
 	  <oper>setColor<args>(color)</args></oper>
+	  
 	  <info>Описание:</info>
-	  <block>Задаёт текущий цвет/градиент</block>
-	  <info>Поддерживает:</info><block>
+	  <block>Задаёт текущий цвет/градиент/текстуру</block>
+	  <info>Параметры:</info>
+	  <block>color: цвет/градиент/текстура</block>
+	  <info>Поддерживает:</info>
+	  <block>
 	  RGB: 'rgb(255,128,64);'<br/>
 	  HEX: '#4c4c4c'<br/>
-	  COLOR: 'red'<br/></block>
+	  COLOR: 'red'<br/>
+	  </block>
+	  <info>Возвращаемое значение:</info><block><orange>true</orange></block>
+	  <info>Пример использования:</info>
+	  <block>setColor('#0f0f0f');<br/>
+	  setColor('green');<br/>
+	  setColor('rgb(128,64,15)');</block>
 
-	  <oper>fillScreen<args>(color)</args></oper><block> - заливает экран указанным цветом/градиентом color</block>
-
-	  <oper>setLineWidth<args>(width)</args></oper><block> - задать толщину линий</block>
-
-	  <oper>setFont<args>(family)</args></oper><block> - задать шрифт</block>
-
-	  <oper>setFontSize<args>(size)</args></oper><block> - задать размер шрифта (в px) (кегль)</block>
-
-	  <oper>fillRect<args>(x,y,w,h)</args></oper><block> - заливает прямоугольник от x;y с шириной w и высотой h</block>
-
-	  <oper>fillArc<args>(x,y,radius,startAngle, endAngle, drection)</args></oper><block> - тоже самое, что и drawArc, но залитое</block>
-
-	  <oper>drawRect4<args>(x,y,x1,y1,x2,y2,x3,y3)</args></oper><block> - рисует 4-хугольник (рамку) по 4-м точкам</block>
-
-	  <oper>fillRect4<args>(x,y,x1,y1,x2,y2,x3,y3)</args></oper><block> - рисует 4-хугольник (залитый) по 4-м точкам</block>
-
-	  <oper>drawTriangle<args>(x,y,x1,y1,x2,y2)</args></oper><block> - рисует треугольник по 3-м точкам</block>
-
-	  <oper>fillTriangle<args>(x,y,x1,y1,x2,y2)</args></oper><block> - рисует залитый треугольник по 3-м точкам</block>
-
-	  <oper>makeLinearGradient<args>(x,y,x1,y1)</args></oper><block> - создаёт линейный градиент (подробнее позже)</block>
-
-	  <oper>makeRadialGradient<args>(x,y,r,x1,y1,r1)</args></oper><block> - создаёт круговой градиент (подробнее
-	  позже)</block>
-
-	  <oper>setGragientColor<args>(name, num, color)</args></oper><block> - задаёт цвет color градиенту name. num -
-	  номер цвета (начиная с 0)</block>
-
-      <oper>makeTexture<args>(url,repetion)</args></oper><block> - создаёт текстуру url с повторением
-	  (repeat/no-repeat/repeat-x/repeat-y)</block>
+	  
+	  <oper>fillScreen<args>(color)</args></oper>
+	  
+	  <info>Описание:</info>
+	  <block>Заливает экран указанным цветом</block>
+	  <info>Параметры:</info>
+	  <block>color: цвет/градиент/текстура</block>
+	  <info>Возвращаемое значение:</info><block><orange>true</orange></block>
+	  <info>Пример использования:</info>
+	  <block>fillScreen('#0f0f0f');</block>
+	  
+	  
+	  <oper>setLineWidth<args>(width)</args></oper>
+	  
+	  <info>Описание:</info>
+	  <block>Задаёт ширину линий</block>
+	  <info>Параметры:</info>
+	  <block>widgh: ширина в px</block>
+	  <info>Возвращаемое значение:</info><block><orange>true</orange></block>
+	  <info>Пример использования:</info>
+	  <block>setLineWidth(50);</block>
+	  
+	  
+	  <oper>setFont<args>(family)</args></oper>
+	  
+	  <info>Описание:</info>
+	  <block>Задаёт шрифт</block>
+	  <info>Параметры:</info>
+	  <block>family: название шрифта/семейство</block>
+	  <info>Возвращаемое значение:</info><block><orange>true</orange></block>
+	  <info>Пример использования:</info>
+	  <block>setFont('Arial');</block>
+	  
+	  
+	  <oper>setFontSize<args>(size)</args></oper>
+	  
+	  <info>Описание:</info>
+	  <block>Заливает размер (кегль) шрифта</block>
+	  <info>Параметры:</info>
+	  <block>size: размер в px</block>
+	  <info>Возвращаемое значение:</info><block><orange>true</orange></block>
+	  <info>Пример использования:</info>
+	  <block>setFontSize(15);</block>
+	  
+	  <oper>fillRect<args>(x,y,w,h)</args></oper>
+	  
+	  <info>Описание:</info>
+	  <block>Заливает прямоугольник заданым цветом</block>
+	  <info>Параметры:</info>
+	  <block>x, y: координаты верхнего левого угла, px<br/>
+			 w: ширина, px<br/>
+			 h: высота, px
+	  </block>
+	  <info>Возвращаемое значение:</info><block><orange>true</orange></block>
+	  <info>Пример использования:</info>
+	  <block>fillRect(0,0,100,100);</block>
+	  
+	  
+	  <oper>fillArc<args>(x,y,radius,startAngle, endAngle, drection)</args></oper>
+	  
+	  <info>Описание:</info>
+	  <block>Рисует залитую дугу(круг) с центром в точке (x,y) радиусом radius, берущей начало в точке, имеющей полярную координату startAngle и заканчивающуюся в точке, имеющую полярную координату endAngle. Переменная direction задает направление движения: 0 - положительное, другие значения - отрицательное.</block>
+	  <info>Параметры:</info>
+	  <block> x, y: координаты полюса (центра дуги/круга), px;<br/>
+	  	radius: радиальная координата дуги/круга (радиус);<br/>
+	  	startAngle (необязательно): полярная координата начала дуги;<br/>
+	  	endAngle (необязательно): полярная координата конца дуги;<br/>
+	  	direction (необязательно): направление рисования дуги.<br/></block>
+	  <info>Возвращаемое значение:</info> <block><orange>true</orange></block>
+	  <info>Пример использования:</info>
+	  <block>drawArc(100,100,10);//круг с центром в точке (100,100) и радусом 10 px.
+	  	drawArc(100,100,10,PI,0);//нижний полукруг с центром в точке (100,100) и радиусом 10 px.
+	</block>
+	
+	
+	  <oper>drawRect4<args>(x,y,x1,y1,x2,y2,x3,y3)</args></oper>
+	  
+	  <info>Описание:</info>
+	  <block>Рисует 4-угольник (рамку) по точкам</block>
+	  <info>Параметры:</info>
+	  <block>x, y: координаты верхнего левого угла, px<br/>
+		x1, y1: координаты верхнего правого угла, px<br/>
+		x2, y2: координаты нижнего правого угла, px<br/>
+		x3, y3: координаты нижнего левого угла, px<br/>
+	  </block>
+	  <info>Возвращаемое значение:</info><block><orange>true</orange></block>
+	  <info>Пример использования:</info>
+	  <block>drawRect4(0,0,100,0,100,100,0,100);</block>
+	  
+	  
+	  <oper>fillRect4<args>(x,y,x1,y1,x2,y2,x3,y3)</args></oper>
+	  
+	  <info>Описание:</info>
+	  <block>Рисует залитый 4-угольник по точкам</block>
+	  <info>Параметры:</info>
+	  <block>x, y: координаты верхнего левого угла, px<br/>
+		x1, y1: координаты верхнего правого угла, px<br/>
+		x2, y2: координаты нижнего правого угла, px<br/>
+		x3, y3: координаты нижнего левого угла, px<br/>
+	  </block>
+	  <info>Возвращаемое значение:</info><block><orange>true</orange></block>
+	  <info>Пример использования:</info>
+	  <block>fillRect4(0,0,100,0,100,100,0,100);</block>
+	  
+	  
+	  <oper>drawTriangle<args>(x,y,x1,y1,x2,y2)</args></oper>
+	  
+	  <info>Описание:</info>
+	  <block>Рисует треугольник (рамку) по 3-м точкам</block>
+	  <info>Параметры:</info>
+	  <block>x, y: координаты верхнего угла, px<br/>
+		x1, y1: координаты нижнего правого угла, px<br/>
+		x2, y2: координаты нижнего левого угла, px<br/>
+	  </block>
+	  <info>Возвращаемое значение:</info><block><orange>true</orange></block>
+	  <info>Пример использования:</info>
+	  <block>drawTriangle(100,100,50,150,150,150);</block>
+	  
+	  
+	  <oper>fillTriangle<args>(x,y,x1,y1,x2,y2)</args></oper>
+	  
+	  <info>Описание:</info>
+	  <block>Рисует залитый треугольник по 3-м точкам</block>
+	  <info>Параметры:</info>
+	  <block>x, y: координаты верхнего угла, px<br/>
+		x1, y1: координаты нижнего правого угла, px<br/>
+		x2, y2: координаты нижнего левого угла, px<br/>
+	  </block>
+	  <info>Возвращаемое значение:</info><block><orange>true</orange></block>
+	  <info>Пример использования:</info>
+	  <block>fillTriangle(100,100,50,150,150,150);</block>
+	  
+	  
+	  <oper>makeLinearGradient<args>(x,y,x1,y1)</args></oper>
+	  
+	  <info>Описание:</info>
+	  <block>Создаёт линейный градиент</block>
+	  <info>Параметры:</info>
+	  <block>x, y: координаты верхнего угла, px<br/>
+		x1, y1: координаты нижнего правого угла, px<br/>
+	  </block>
+	  <info>Возвращаемое значение:</info><block>градиент</block>
+	  <info>Пример использования:</info>
+	  <block>makeLinearGradient(0,0,screenWidth(),screenHeight());</block>
+	  
+	  
+	  <oper>makeRadialGradient<args>(x,y,r,x1,y1,r1)</args></oper>
+	  
+	  <info>Описание:</info>
+	  <block>Создаёт радиальный (круговой) градиент</block>
+	  <info>Параметры:</info>
+	  <block>x, y: координаты верхнего угла, px<br/>
+	  		 r: малый радиус, px<br/>
+			 x1, y1: координаты нижнего правого угла, px<br/>
+			 r1: большой радиус, px
+	  </block>
+	  <info>Возвращаемое значение:</info><block>градиент</block>
+	  <info>Пример использования:</info>
+	  <block>makeLinearGradient(0,0,screenWidth(),screenHeight());</block>	  
+	  
+	  
+	  <oper>setGragientColor<args>(name, num, color)</args></oper>
+	  
+	  <info>Описание:</info>
+	  <block>Задаёт цвета градиенту</block>
+	  <info>Параметры:</info>
+	  <block>name: градиент (созданный в makeLinear/RadialGradient<br/>
+		num: позиция цвета; 0 - начало, 1 - конец<br/>
+	  </block>
+	  <info>Возвращаемое значение:</info><block><orange>true</orange></block>
+	  <info>Пример использования:</info>
+	  <block>g = makeLinearGradient(0,0,screenWidth(),screenHeight());<br/>setGradientColor(g,0,'red');<br/>setGradientColor(g,1,'black');</block>
+	  
+	  
+      <oper>makeTexture<args>(url,repetion)</args></oper>
+	  
+	  <info>Описание:</info>
+	  <block>Создаёт текстуру</block>
+	  <info>Параметры:</info>
+	  <block>url: путь к файлу<br/>
+		repeation: повторение =><block>repeat: повторять<br/>
+									no-repeat: не повторять<br/>
+									repeat-x: повторять по горизонтали<br/>
+									repeat-y: повторять по вертикали
+							 </block>
+	  </block>
+	  <info>Возвращаемое значение:</info><block>текстура</block>
+	  <info>Пример использования:</info>
+	  <block>makeTexture('img/texture.png','repeat');</block>
 <!--/pre-->	  
     </div>
   </div>

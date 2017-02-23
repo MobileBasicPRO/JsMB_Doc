@@ -32,7 +32,7 @@
               <div class="content-block-title">Разделы приложен<span class="open-popover">ия:</span></div>
               <div class="list-block">
                 <ul>
-				  <li><a href="settings.html" class="item-link close-panel">
+				  <li><a href="#" data-popup=".settings-popup" class="item-link close-panel open-popup">
                       <div class="item-content">
                         <div class="item-media"><i class="icon icon-f7"></i></div>
                         <div class="item-inner">
@@ -240,6 +240,33 @@ arg2 - второй аргумент</textarea>
         </div>
       </div>
     </div>
+	<div class="popup settings-popup">
+      <div class="view navbar-fixed">
+        <div class="pages">
+          <div class="page">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="left"><a href="#" class="link close-popup">Закрыть</a></div>
+                <div class="center">Настройки</div>
+              </div>
+            </div>
+            <div class="page-content">
+			  <div class="content-block-title">Основные настройки</div>
+			  <div class="content-block">
+				<div class="list-block inputs-list">
+				  <ul>
+					<li><a href="#" class="button button-raised" onclick="checkupdate()">Проверить обновления</a></li>
+				  </ul>
+				</div>
+			  </div>
+			  <!--</div>-->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	
     <div class="popover popover-menu">
       <div class="popover-inner">
         <div class="list-block">

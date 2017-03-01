@@ -76,6 +76,10 @@ function gotoURL(url){
 	});
 }
 
+function soon(){
+	$$$.alert('Ожидайте в следующей версии');
+}
+
 
   function g_main(){
 	var g_oper = document.getElementById('g_operator').value.split('(');
@@ -94,3 +98,28 @@ function gotoURL(url){
 
 	};
 	g_main();
+	
+function checkupdate(){
+	soon();
+	return;
+}
+
+
+//антибаг
+
+/*
+укрмов - - 8
+укрлит 9 5 5 9
+англ 8
+зарлит 7 8 11 12
+истукр 10 11 5 8 8
+всесвист 9 - 7
+матем 9 9 9 8 6 7 11 11 7
+физика 8//8 [9/]
+биол - 6
+геогр 7
+химия 9 11 10 12 10 10 10 11
+информ 11
+физ-ра -
+зв -
+*/

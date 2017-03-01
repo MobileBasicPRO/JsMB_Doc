@@ -60,7 +60,7 @@
 <block>x, y: числа.</block>
 <info>Возвращаемое значение:</info><block> Oстаток от целочисленного деления числа x на число y.</block>
 <info>Пример использования:</info>
-<var>a</var> = <coper>mod</coper><carg>(5.7,2.5)</carg>;<green>//a = 0.7</green>
+<block><var>a</var> = <coper>mod</coper><carg>(5.7,2.5)</carg>;<green>//a = 0.7</green></block>
 
 <oper>abs<args>(x)</args></oper>
 
@@ -80,17 +80,18 @@ x: число.</block>
 <info>Пример использования:</info>
 <block><var>a</var> = <coper>sqrt</coper><carg>(9)</carg>;<green>//a = 3</green></block>
 
-random(a,b)
+<oper>random</oper><args>(a,b)</args>
 
-Описание: возвращает псевдослучайное число в диапазоне от a до b.
-Параметры:
-a, b: числа.
-Возвращаемое значение: псевдослучайное число в диапазоне от a до b.
-Пример использования:
-r = random(0,255);
-g = random(0,255);
-b = random(0,255);
-fillScreen('rgb('+r+','+g+','+b+')');
+<info>Описание:</info> <block>Bозвращает псевдослучайное число в диапазоне от a до b.</block>
+<info>Параметры:</info>
+<block>a, b: числа.</block>
+<info>Возвращаемое значение:</info> <block>Псевдослучайное число в диапазоне от a до b.</block>
+<info>Пример использования:</info><block>
+<var>r</var> = <coper>random</coper><carg>(0,255)</carg>;<br/>
+<var>g</var> = <coper>random</coper><carg>(0,255)</carg>;<br/>
+<var>b</var> = <coper>random</coper><carg>(0,255)</carg>;<br/>
+<coper>fillScreen</coper><carg>(<str>'rgb('</str>+r+<str>','</str>+g+<str>','</str>+b+<str>')'</str>)</carg>; <green>//Заливает экран случайным цветом</green>
+</block>
 
 pow(x, num)
 

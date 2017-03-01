@@ -66,6 +66,10 @@ func{
   font-size:130%;
 }
 
+str{
+  color: #D06538;
+}
+
 pre{
   font-family:sans;
   font-size:1rem;

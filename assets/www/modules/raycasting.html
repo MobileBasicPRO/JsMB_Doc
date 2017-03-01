@@ -9,28 +9,16 @@
   <div class="page-content">
     <div class="content-block-title">Графические операторы в JsMobileBasic</div>
     <div class="content-block">
-	  <!--pre>
-	  <oper>clearRect<args>(x, y, w, h)</args></oper>
-	  <info>Описание:</info>
-	  <block>Очищает прямоугольную область, начиная от точки с координатой (x, y) px, шириной w px и высотой h px.</block>
-	  <info>Параметры:</info>
-	  <block>
-		x, y: координаты левого верхнего угла очищаемой прямоугольной области, px;<br/>
-	  	w: ширина очищаемой прямоугольной области;<br/>
-	  	h: высота очищаемой прямоугольной области.<br/></block>
-	  <info>Возвращаемое значение:</info> <block><orange>true</orange></block>
-	  <info>Пример использования:</info>
-	  <block>clearRect(0,0,100,100);</block>-->
 
 <info>Данные:</info>
 
 Для запуска библиотеки достаточно выполнить эту команду в хуке Main():
 
-<block>Raycaster.run();</block> 
+<block><coper>Raycaster</coper>.<carg>run</carg>();</block> 
 
 Или 
 
-<block>Raycaster.run(640,480);</block>
+<block><coper>Raycaster</coper>.<carg>run</carg>(640,480);</block>
 для запуска с ограниченными размерами 
 
 <info>Карта:</info>
@@ -39,7 +27,7 @@
 
 Пример карты 4х4: 
 <block>
-TestMap = [ <br/><block>
+<var>TestMap</var> = [ <br/><block>
 1,1,1,1, <br/>
 1,0,0,1, <br/>
 1,0,0,1, <br/>
@@ -49,7 +37,7 @@ TestMap = [ <br/><block>
 
 Можно сделать и так: 
 <block>
-TestMap = [ <br/><block>
+<var>TestMap</var> = [ <br/><block>
 1,1,1,1, <br/>
 3,0,0,2, <br/>
 3,0,0,2, <br/>
@@ -60,45 +48,45 @@ TestMap = [ <br/><block>
 <br/><br/>
 Для подключения карты используеться оператор loadMap; <br/>
 Он принимает 4 параметра:
-<block>Raycasting.loadMap(map, name, width, height); </block>
+<block><coper>Raycasting</coper>.<carg>loadMap</carg>(map, name, width, height); </block>
 <info>Параметры:</info><block>
-map - массив нашей карты, 
-name - название карты, например "Map01", 
-width - ширина карты (количество значений в строке массива), у нас она 4, 
-height - длина карты (количество строк в массиве), у нас она тоже 4 
+map - массив нашей карты, <br/>
+name - название карты, например "Map01", <br/>
+width - ширина карты (количество значений в строке массива), у нас она 4, <br/>
+height - длина карты (количество строк в массиве), у нас она тоже 4 <br/>
 </block>
 <info>Загрузка карты:</info>
 <block>
-TestMap = [ <br/><block>
+<var>TestMap</var> = [ <br/><block>
 1,1,1,1, <br/>
 1,0,0,1, <br/>
 1,0,0,1, <br/>
 1,1,1,1 <br/></block>
 ]; <br/>
-Raycaster.loadMap(TestMap, 'Карта 1', 4, 4); </block>
+<coper>Raycaster</coper>.<carg>loadMap</carg>(TestMap, 'Карта 1', 4, 4); </block>
 
 <info>Текстуры:</info>
 
 Пакет текстур тоже представляет из себя массив, а именно: <br/>
 
-<block>Textures = ['', 'текстура1','текстура2','текстураN']; </block>
+<block><var>Textures</var> = ['', 'текстура1','текстура2','текстураN']; </block>
 
 Первое значение ('') служит пустотой, остальные - текстурами стен. <br/><br/>
 
 для загрузки текстур используйте оператор: 
-<block>Raycasting.loadTextures(Textures); </block>
+<block><coper>Raycasting</coper>.<carg>loadTextures</carg>(Textures); </block>
 
 Допустим, у нас есть 2 текстуры: wall1.png и wall2.png, и нам нужно сделать карту 4х4 с этими текстурами.<br/>
 Делаем: 
 <block>
-Map1 = [ <br/><block>
+<var>Map1</var> = [ <br/><block>
 1,2,2,1, <br/>
 1,0,0,1, <br/>
 1,0,0,1, <br/>
 1,1,1,1 <br/></block>
 ]; <br/>
-Textures = ['','wall1.png','wall2.png']; <br/>
-Raycaster.loadTextures(Textures); <br/>
+<var>Textures</var> = ['','wall1.png','wall2.png']; <br/>
+<coper>Raycaster</coper>.<carg>loadTextures</carg>(Textures); <br/>
 </block>
 <b>Готово!</b>
 
@@ -107,11 +95,11 @@ Raycaster.loadTextures(Textures); <br/>
 Спрайты нужны для отображения объектов на карте. 
 Они представляют из себя то же, что и текстуры, но не требуют значения '' в начале ;) 
 
-<block>Sprites = ['barrel.png', 'car.jpg']; </block>
+<block><var>Sprites</var> = ['barrel.png', 'car.jpg']; </block>
 
 Для загрузки спрайтов - используйте: 
 
-<block>Raycasting.loadSprites(Sprites); </block>
+<block><coper>Raycasting</coper>.<carg>loadSprites</carg>(Sprites); </block>
 
 Всё очень просто) 
 
@@ -123,20 +111,20 @@ Raycaster.loadTextures(Textures); <br/>
 
 Пример создания объектов: 
 <block>
-Items = [ 
+<var>Items</var> = [ 
 { <block>
-        name: "Бочка", <br/>
-        texture: 0, <green>//у нас это barrel.png</green> <br/>
-        x: 2, <green>//Расположение на карте</green> <br/>
-        y: 2, <br/>
-        size: 0.5 <green>//Размер</green> </block>
+        <var>name</var>: "Бочка", <br/>
+        <var>texture</var>: 0, <green>//у нас это barrel.png</green> <br/>
+        <var>x</var>: 2, <green>//Расположение на карте</green> <br/>
+        <var>y</var>: 2, <br/>
+        <var>size</var>: 0.5 <green>//Размер</green> </block>
 }, 
 { <block>
-        name: "Машина", <br/>
-        texture: 1, //у нас это car.jpg <br/>
-        x: 2, <green>//Расположение на карте</green> <br/>
-        y: 2, <br/>
-        size: 1.0 <green>//Размер</green> </block>
+        <var>name</var>: "Машина", <br/>
+        <var>texture</var>: 1, //у нас это car.jpg <br/>
+        <var>x</var>/var>: 2, <green>//Расположение на карте</green> <br/>
+        <var>y</var>: 2, <br/>
+        <var>size</var>: 1.0 <green>//Размер</green> </block>
 } 
 ];</block> 
 
@@ -149,26 +137,26 @@ Items = [
 Для управления движением нужно задать клавиши;) 
 
 Например: 
-
-function onKeyDown(key){ //Это уже есть в файле 
-        Raycasting.goFoward(1); //Включаем движение вперёд 
+<block>
+<func>function</func> <coper>onKeyDown</coper>(key){ //Это уже есть в файле 
+        <coper>Raycasting</coper>.<carg>goFoward</carg>(1); //Включаем движение вперёд 
 }; 
 
-function onKeyUp(key){ 
-        Raycasting.goFoward(0); //Выключаем движение вперёд 
+<func>function</func> <coper>onKeyUp</coper>(key){ 
+        <coper>Raycasting</coper>.<carg>goFoward</carg>(0); //Выключаем движение вперёд 
 }; 
-
+</block>
 Теперь, пока вы удерживаете любую клавишу на клавиатуре - идёте вперёд ;) 
 
-Возможные действия: 
- Raycasting.goFoward - вперёд 
- Raycasting.goBack - назад 
- Raycasting.turnLeft - поворот влево 
- Raycasting.turnRight - поворот вправо 
- Raycasting.showMap - показать карту (должна быть текстура img/map.png) 
- Raycasting.hideMap - скрыть карту 
- Raycasting.fullScreen - во весь экран 
-
+<info>Возможные действия:</info><block>
+ <coper>Raycasting</coper>.<carg>goFoward</carg> - вперёд <br/>
+ <coper>Raycasting</coper>.<carg>goBack</carg> - назад <br/>
+ <coper>Raycasting</coper>.<carg>turnLeft</carg> - поворот влево <br/>
+ <coper>Raycasting</coper>.<carg>turnRight</carg> - поворот вправо <br/>
+ <coper>Raycasting</coper>.<carg>showMap</carg> - показать карту (должна быть текстура фона карты img/map.png) <br/>
+ <coper>Raycasting</coper>.<carg>hideMap</carg> - скрыть карту <br/>
+ <coper>Raycasting</coper>.<carg>fullScreen</carg> - во весь экран <br/>
+</block>
 Для задания конкретных клавиш - используйте InKey ;)
 		</div>
 	</div>

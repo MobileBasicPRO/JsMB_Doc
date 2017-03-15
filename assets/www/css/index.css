@@ -66,6 +66,10 @@ func{
   font-size:130%;
 }
 
+function{
+  color:rgb(0,220,220);
+}
+
 str{
   color: #D06538;
 }

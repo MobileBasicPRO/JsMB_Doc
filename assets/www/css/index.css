@@ -71,7 +71,13 @@ function{
 }
 
 str{
-  color: #D06538;
+  /*color: #D06538;*/
+  color:rgb(255,128,128);
+}
+
+num{  
+  color:rgb(255,128,128);
+  font-weight:bold;
 }
 
 pre{
@@ -84,4 +90,10 @@ pre{
 
 t{
   text-decoration:underline;
+}
+
+hr{
+  background:orange;
+  color:orange;
+  border-color:orange;
 }

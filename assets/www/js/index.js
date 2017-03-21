@@ -19,7 +19,7 @@ var $$$ = new Framework7({
 var $$ = Dom7;
 
 function log(text){
-	document.getElementById('console').innerHTML += '<orange>#</orange> <red>'+text+'</red><br/>';
+	$$('#console')[0].innerHTML += '<orange>#</orange> <red>'+text+'</red><br/>';
 }
 
 function error(text){
@@ -53,9 +53,14 @@ function info(text){
 	log('<blue>'+text+'</blue>');
 }
 
+function alert(text){
+	$$$.alert(text);
+}
+
 console.error = error;
 console.warn = warn;
 //console.log = info;
+//window.onerror = error;
 
 // Add main view
 var mainView = $$$.addView('.view-main', {});
@@ -92,7 +97,7 @@ function soon(){
 	var params = g_params.split('\n').join('<br/>');
     var g_return = (g_return == "true" || g_return == "false") ? "<orange>"+g_return+"</orange>" : g_return;
 	var tmp = "<oper>"+oper+"<args>"+args+"</args></oper><info>Описание:</info><block>"+g_about+"</block><info>Параметры:</info><block>"+params+"</block><info>Возвращаемое значение:</info><block>"+g_return+"</block><info>Пример использования:<block>"+g_example+"</block>";
-	document.getElementById('g_out').value = tmp;
+	$$('#g_out').val(tmp);
 	log(tmp);
 	//document.write(tmp);
 

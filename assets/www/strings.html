@@ -2,85 +2,93 @@
   <div ontouchmove="return false;" class="navbar">
     <div class="navbar-inner">
       <div class="left"><a href="index.html" class="back link icon-only"><i class="icon icon-back"></i></a></div>
-      <div class="center">Математические функции</div>
+      <div class="center">Строковые функции</div>
 	  <!--<div class="right"><a href="#" data-panel="right" class="link open-panel">#</a></div>-->
     </div>
   </div>
   <div class="page-content">
-    <div class="content-block-title">Графические операторы в JsMobileBasic</div>
+    <div class="content-block-title">Строковые функции в JsMobileBasic</div>
     <div class="content-block">	  
-<oper>sin<args>(x)</args></oper>
+<oper>len<args>(str)</args></oper>
 
-<info>Описание:</info><block> Возвращает синус числа x.</block>
+<info>Описание:</info><block> Возвращает длину строки <var>str</var>.</block>
 <info>Параметры:</info>
 <block>
-	x: величина угла в радианах (рад.).
+	str: Строка.
 	</block>
-<info>Возвращаемое значение:</info> <block>синус угла x.</block>
+<info>Возвращаемое значение:</info> <block>длина строки str.</block>
 <info>Пример использования:</info>
-<block><var>a</var> = <coper>sin</coper><carg>(0)</carg>; <green>//a = 0</green></block>
+<block><var>a</var> = <coper>len</coper><carg>(<str>"Hello world"</str>)</carg>; <green>//a = 11</green></block>
 
-	  <oper>cos<args>(x)</args></oper>
+	  <oper>int<args>(str)</args></oper><br/>
+	  <oper>val<args>(str)</args></oper>
 
-	  <info>Описание:</info><block> Возвращает косинус числа x.</block>
+	  <info>Описание:</info><block> Парсит число из строки <var>str</var>.</block>
 	  <info>Параметры:</info>
 	  <block>
-		x: величина угла в радианах (рад.).
+		str: Строка.
 	  </block>
-	  <info>Возвращаемое значение:</info> <block>косинус угла x.</block>
+	  <info>Возвращаемое значение:</info> <block>число из строки str, или NaN.</block>
 	  <info>Пример использования:</info>
-	  <block><var>a</var> = <coper>cos</coper><carg>(0)</carg>; <green>//a = 1</green></block>
+	  <block><var>a</var> = <coper>int</coper><carg>(<str>"5"</str>)</carg>; <green>//a = 5</green><br/>
+		<var>a</var> = <coper>val</coper><carg>(<str>"100"</str>)</carg>; <green>//a = 100</green>
+	  </block>
 	  
-	  <oper>tan<args>(x)</args></oper>
+	  <oper>float<args>(str)</args></oper>
 
-	  <info>Описание:</info><block> Возвращает тангенс числа x.</block>
+	  <info>Описание:</info><block> Парсит дробь из строки str.</block>
 	  <info>Параметры:</info>
 	  <block>
-		x: величина угла в радианах (рад.).
+		str: Строка.
 	  </block>
-	  <info>Возвращаемое значение:</info> <block>тангенс угла x.</block>
+	  <info>Возвращаемое значение:</info> <block>десятичная дробь из строки str.</block>
 	  <info>Пример использования:</info>
-	  <block><var>a</var> = <coper>tan</coper><carg>(0)</carg>; <green>//a = 0</green></block>
+	  <block><var>a</var> = <coper>float</coper><carg>(<str>"10.54"</str>)</carg>; <green>//a = 10.54</green></block>
 	  
-	  <oper>ctg<args>(x)</args></oper>
+	  <oper>upper<args>(str)</args></oper>
 
-	  <info>Описание:</info><block> Возвращает котангенс числа x.</block>
+	  <info>Описание:</info><block>Переводит строку <var>str</var> в верхний регистр.</block>
 	  <info>Параметры:</info>
 	  <block>
-		x: величина угла в радианах (рад.).
+		str: Строка.
 	  </block>
-	  <info>Возвращаемое значение:</info> <block>котангенс угла x.</block>
+	  <info>Возвращаемое значение:</info> <block>строка в верхнем регистре.</block>
 	  <info>Пример использования:</info>
-	  <block><var>a</var> = <coper>ctg</coper><carg>(1)</carg>; <green>//a = 0.6420926159343307</green></block>
+	  <block><var>a</var> = <coper>upper</coper><carg>(<str>"word"</str>)</carg>; <green>//a = "WORD"</green></block>
 
-<oper>mod<args>(x, y)</args></oper>
+<oper>lower<args>(str)</args></oper>
 
-<info>Описание:</info> <block>Bозвращает остаток от целочисленного деления числа x на число y. </block>
+	  <info>Описание:</info> <block>Переводит строку <var>str</var> в нижний регистр.</block>
 <info>Параметры:</info>
 <block>x, y: числа.</block>
-<info>Возвращаемое значение:</info><block> Oстаток от целочисленного деления числа x на число y.</block>
+<info>Возвращаемое значение:</info><block>строка в нижнем регистре.</block>
 <info>Пример использования:</info>
-<block><var>a</var> = <coper>mod</coper><carg>(5.7,2.5)</carg>;<green>//a = 0.7</green></block>
+<block><var>a</var> = <coper>lower</coper><carg>(<str>"word"</str>)</carg>;<green>//a = "WORD"</green></block>
 
-<oper>abs<args>(x)</args></oper>
+<oper>split<args>(str, sym)</args></oper>
 
-<info>Описание:</info> <block>Bозвращает значение модуля числа x.</block>
+<info>Описание:</info> <block>Разбивает строку <var>str</var> по символам <var>sym</var>.</block>
 <info>Параметры:</info>
-<block>x: число.</block>
-<info>Возвращаемое значение:</info> <block>модуль числа x.</block>
+<block>str: Строка.<br/>
+  sym: Символ, строка
+</block>
+<info>Возвращаемое значение:</info> <block>массив символов.</block>
 <info>Пример использования:</info>
-<block><var>a</var> = <coper>abs</coper><carg>(-5)</carg>;<green>//a = 5</green></block>
+<block><var>a</var> = <coper>split</coper><carg>(<str>"hello"</str>,<str>""</str>)</carg>;<green>//a = ["h","e","l","l","o"]</green></block>
 
-<oper>sqrt<args>(x)</args></oper>
+<oper>replace<args>(str,regexp,to)</args></oper>
 
-<info>Описание:</info> <block>Bозвращает значение корня квадартного числа x.</block>
+<info>Описание:</info> <block>Заменяет в строке символы по регулярному выражению <var>regexp</var> на <var>to</var>.</block>
 <info>Параметры:</info><block>
-x: число.</block>
-<info>Возвращаемое значение:</info> <block>Kорень квадартный числа x.</block>
+str: Строка;<br/>
+regexp: Регулярное выражение;
+to: Замена, строка
+</block>
+<info>Возвращаемое значение:</info> <block>строка</block>
 <info>Пример использования:</info>
-<block><var>a</var> = <coper>sqrt</coper><carg>(9)</carg>;<green>//a = 3</green></block>
-
-<oper>random</oper><args>(a,b)</args>
+<block><var>a</var> = <coper>replace</coper><carg>(<str>"Hello world!"</str>,<str>/world/g</str>,<str>"me"</str>)</carg>;<green>//a = "Hello me!"</green></block>
+<!--
+<oper>...</oper><args>(a,b)</args>
 
 <info>Описание:</info> <block>Bозвращает псевдослучайное число в диапазоне от a до b.</block>
 <info>Параметры:</info>
@@ -90,7 +98,7 @@ x: число.</block>
 <var>r</var> = <coper>random</coper><carg>(0,255)</carg>;<br/>
 <var>g</var> = <coper>random</coper><carg>(0,255)</carg>;<br/>
 <var>b</var> = <coper>random</coper><carg>(0,255)</carg>;<br/>
-<coper>fillScreen</coper><carg>(rgb(r,g,b))</carg>; <green>//Заливает экран случайным цветом</green>
+<coper>fillScreen</coper><carg>(<str>'rgb('</str>+r+<str>','</str>+g+<str>','</str>+b+<str>')'</str>)</carg>; <green>//Заливает экран случайным цветом</green>
 </block>
 
 <oper>pow<args>(x, num)</args></oper>
@@ -130,6 +138,8 @@ x: значение арктангенса искомого угла.</block>
 <info>Возвращаемое значение:</info> <block>Aрктангенс числа x.</block>
 <info>Пример использования:</info>
 <block><var>a</var> = <coper>atan</coper><carg>(0)</carg>;<green>//a = 0</green></block>
-	</div>
+-->
 </div>
 </div>
+</div>
+

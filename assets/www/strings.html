@@ -87,39 +87,37 @@ to: Замена, строка
 <info>Возвращаемое значение:</info> <block>строка</block>
 <info>Пример использования:</info>
 <block><var>a</var> = <coper>replace</coper><carg>(<str>"Hello world!"</str>,<str>/world/g</str>,<str>"me"</str>)</carg>;<green>//a = "Hello me!"</green></block>
-<!--
-<oper>...</oper><args>(a,b)</args>
 
-<info>Описание:</info> <block>Bозвращает псевдослучайное число в диапазоне от a до b.</block>
+<oper>mid</oper><args>(str, start, end)</args>
+
+<info>Описание:</info> <block>Вырезает строку в диапазоне от start до end.</block>
 <info>Параметры:</info>
-<block>a, b: числа.</block>
-<info>Возвращаемое значение:</info> <block>Псевдослучайное число в диапазоне от a до b.</block>
+<block>str: строка;<br/>
+  start, end: числа.</block>
+<info>Возвращаемое значение:</info> <block>строка.</block>
 <info>Пример использования:</info><block>
-<var>r</var> = <coper>random</coper><carg>(0,255)</carg>;<br/>
-<var>g</var> = <coper>random</coper><carg>(0,255)</carg>;<br/>
-<var>b</var> = <coper>random</coper><carg>(0,255)</carg>;<br/>
-<coper>fillScreen</coper><carg>(<str>'rgb('</str>+r+<str>','</str>+g+<str>','</str>+b+<str>')'</str>)</carg>; <green>//Заливает экран случайным цветом</green>
+  <var>a</var>=<coper></coper><carg>(<str>"world"</str>,0,2)</carg>; <green>//a = "wo"</green>
 </block>
 
-<oper>pow<args>(x, num)</args></oper>
+<oper>char<args>(sym)</args></oper>
 
-<info>Описание:</info> <block>Bозводит число x в степень num.</block>
+<info>Описание:</info> <block>Возвращает код символа sym.</block>
 <info>Параметры:</info><block>
-x, num: основание степени, показатель степени.</block>
-<info>Возвращаемое значение:</info><block>Pезультат возведения числа n в степень num.</block>
+sym: символ, строка.</block>
+<info>Возвращаемое значение:</info><block>код символа sym.</block>
 <info>Пример использования:</info>
-<block><var>a</var> = <coper>pow</coper><carg>(2, 8)</carg>;<green>//a = 256</green></block>
+<block><var>a</var> = <coper>char</coper><carg>("h")</carg>;<green>//a = 256</green></block>
 
-<oper>asin<args>(x)</args></oper>
+<oper>asc<args>(char)</args></oper>
 
-<info>Описание:</info> <block>Bозвращает значение арксинуса числа x в радианах (рад.).</block>
+<info>Описание:</info> <block>Bозвращает символ за его значением char.</block>
 <info>Параметры:</info><block>
-x: значение арксинуса искомого угла.</block>
-<info>Возвращаемое значение:</info> <block>Aрксинус числа x.</block>
+char: код символа, строка.</block>
+<info>Возвращаемое значение:</info> <block>Символ.</block>
 <info>Пример использования:</info>
-<block><var>a</var> = <coper>asin</coper><carg>(0)</carg>;<green>//a = 0</green></block>
+<block><var>a</var> = <coper>asc</coper><carg>("228")</carg>;<green>//a = ""</green></block>
 
-
+<!--
 <oper>acos<args>(x)</args></oper>
 
 <info>Описание:</info> <block>Bозвращает значение арккосинуса числа x в радианах (рад.).</block>

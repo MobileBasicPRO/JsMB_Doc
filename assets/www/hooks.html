@@ -1,0 +1,101 @@
+
+<div data-page="about" class="page">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="left"><a href="index.html" class="back link icon-only"><i class="icon icon-back"></i></a></div>
+      <div class="center">Хуки</div>
+    </div>
+  </div>
+  <div class="page-content">
+    <div class="content-block-title">Принимали участие в создании приложения:</div>
+    <div class="content-block">
+	  Хуки (в программировании) - это обработчики событий.<br/>
+	  В JsMB они пишутся так:<br/>
+	  <block>
+		<function>function</function> <coper>onClick</coper><carg>(x,y)</carg>{<br/>
+		<block><green>//Код</green></block>
+		}
+	  </block>
+	  На сегодняшний день в JsMobileBasic доступны следующие хуки:
+	  <block>
+		<coper>onClick</coper><carg>(x,y)</carg><br/>
+		<coper>onRightClick</coper><carg>(x,y)</carg><br/>
+		<coper>onMouseDown</coper><carg>(x,y)</carg><br/>
+		<coper>onMouseUp</coper><carg>(x,y)</carg><br/>
+		<coper>onMouseMove</coper><carg>(x,y)</carg><br/>
+		<coper>onKeyPress</coper><carg>(code)</carg><br/>
+		<coper>onKeyDown</coper><carg>(code)</carg><br/>
+		<coper>onKeyUp</coper><carg>(code)</carg><br/>
+	  </block>
+	  Теперь о каждом подробнее:<br/>
+	  <oper>onClick<args>(x,y)</args></oper>
+	  <info>Когда срабатывает:</info>
+	  <block>При клике левой клавишей мыши</block>
+	  <info>Что возвращает:</info>
+	  <block>
+		<var>x</var> - X координата мыши при клике, px<br/>
+	  	<var>y</var> - Y координата мыши при клике, px
+	  </block>
+	  <oper>onRightClick<args>(x,y)</args></oper>
+	  <info>Когда срабатывает:</info>
+	  <block>При клике правой клавишей мыши</block>
+	  <info>Что возвращает:</info>
+	  <block>
+		<var>x</var> - X координата мыши при клике, px<br/>
+	  	<var>y</var> - Y координата мыши при клике, px
+	  </block>
+	  <oper>onMouseDown<args>(x,y)</args></oper>
+	  <info>Когда срабатывает:</info>
+	  <block>При нажатии любой клавиши мыши</block>
+	  <info>Что возвращает:</info>
+	  <block>
+		<var>x</var> - X координата мыши при действии, px<br/>
+	  	<var>y</var> - Y координата мыши при действии, px
+	  </block>
+	  <oper>onMouseUp<args>(x,y)</args></oper>
+	  <info>Когда срабатывает:</info>
+	  <block>При отжатии любой клавиши мыши</block>
+	  <info>Что возвращает:</info>
+	  <block>
+		<var>x</var> - X координата мыши при действии, px<br/>
+	  	<var>y</var> - Y координата мыши при действии, px
+	  </block>
+	  <oper>onMouseMove<args>(x,y)</args></oper>
+	  <info>Когда срабатывает:</info>
+	  <block>При движении мыши</block>
+	  <info>Что возвращает:</info>
+	  <block>
+		<var>x</var> - X координата мыши при движении, px<br/>
+	  	<var>y</var> - Y координата мыши при движении, px
+	  </block>
+	  <oper>onKeyDown<args>(code)</args></oper>
+	  <info>Когда срабатывает:</info>
+	  <block>При нажатии любой клавиши</block>
+	  <info>Что возвращает:</info>
+	  <block>
+		<var>code</var> - код нажатой клавиши
+	  </block>
+	  <oper>onKeyUp<args>(code)</args></oper>
+	  <info>Когда срабатывает:</info>
+	  <block>При отжатии любой клавиши</block>
+	  <info>Что возвращает:</info>
+	  <block>
+		<var>code</var> - код отжатой клавиши
+	  </block>
+	  <oper>onKeyPress<args>(code)</args></oper>
+	  <info>Когда срабатывает:</info>
+	  <block>Циклично при отжатии любой клавиши мыши</block>
+	  <info>Что возвращает:</info>
+	  <block>
+		<var>code</var> - код зажатой клавиши
+	  </block>
+	  <br/>
+	<hr>
+	  <info>Примеры использования:</info>
+	  <block><function>function</function> <coper>onKeyDown</coper><carg>(code)</carg>{
+	  <block><coper>println</coper><carg>(code)</carg>;<green> //Выводит на экран код нажатой клавиши для дальнейшего использования</green></block>
+
+	  }</block>
+	</div>
+  </div>
+</div>

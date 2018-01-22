@@ -8,8 +8,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="theme-color" content="orange">
     <title>Документация по JsMobileBasic (by PROPHESSOR)</title>
-    <link rel="stylesheet" href="css/framework7.material.css">
-    <link rel="stylesheet" href="css/framework7.material.colors.css">
+    <link rel="stylesheet" href="css/framework7.material.min.css">
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="icon" href="img/icon.png">
@@ -58,37 +58,6 @@
         </div>
       </div>
     </div>
-	<!--Right Panel-->
-	<div class="panel panel-right panel-cover panel-swipable">
-	  <div class="view navbar-fixed">
-		<div class="pages">
-		  <div data-page="panel-right" class="page">
-			<div ontouchmove="return false;" class="navbar">
-			  <div class="navbar-inner">
-				<div class="center">Теги</div>
-			  </div>
-			</div>
-			<div class="page-content">
-			  <div class="content-block">
-			  </div>
-			  <div class="content-block-title">Операторы:</div>
-			  <div class="list-block">
-				<ul>
-				  <li><a href="#cls" class="item-link close-panel">
-					  <div class="item-content">
-						<div class="item-media"><i class="icon icon-f7"></i></div>
-						<div class="item-inner">
-						  <div class="item-title">cls()</div>
-						</div>
-					  </div></a></li>
-				</ul>
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  </div>
-	</div>
-	<!--/Right Panel-->
 <!--/panel-->
     <div class="views">
       <div class="view view-main">
@@ -97,9 +66,9 @@
             <div ontouchmove="return false;" class="navbar">
               <div class="navbar-inner">
                 <div class="left"><a href="#" class="open-panel link icon-only"><i class="icon icon-bars"></i></a></div>
-                <div class="center">Документация по JsMobileBasic (Alpha 9)</div>
+                <div class="center">Документация по JsMobileBasic (Alpha 10)</div>
               </div>
-            </div><a href="#" class="floating-button color-orange open-popover"><i class="icon icon-plus"></i></a>
+            </div><a href="#" onclick="/*alert('Это раздел для отладки, в релизе он будет скрыт')*/" class="floating-button color-orange open-popover"><i class="icon icon-plus"></i></a>
             <div class="page-content">
               <div class="content-block-title">Добро пожаловать в самоучитель (документацию) по JsMobileBasic</div>
               <!--div class="content-block"><a href="about.html" class="button button-raised">Что такое JsMobileBasic?</a></div-->
@@ -111,7 +80,7 @@
                         <div class="item-media"><i class="icon icon-f7"></i></div>
                         <div class="item-inner">
                           <div class="item-title">Что такое JsMobileBasic</div>
-						  <div class="item-after"><span class="badge bg-green">NEW</span></div>
+						  <!--<div class="item-after"><span class="badge bg-green">NEW</span></div>-->
                         </div>
                       </div></a></li>
 				  <li><a href="history.html" class="item-link">
@@ -119,19 +88,35 @@
                         <div class="item-media"><i class="icon icon-f7"></i></div>
                         <div class="item-inner">
                           <div class="item-title">История развития JsMobileBasic</div>
-                          <div class="item-after"><span class="badge bg-green">NEW</span></div>
+                          <!--<div class="item-after"><span class="badge bg-green">NEW</span></div>-->
+                        </div>
+                      </div></a></li>
+				  <li><a href="mb2jsmb.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-media"><i class="icon icon-f7"></i></div>
+                        <div class="item-inner">
+                          <div class="item-title">Миграция с Mobile Basic</div>
+                          <!--<div class="item-after"><span class="badge bg-green">NEW</span></div>-->
                         </div>
                       </div></a></li>
 					</ul>
 			  </div><div class="content-block-title">Документация</div>
               <div class="list-block">
 				<ul>
+				  <li><a href="hooks.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-media"><i class="icon icon-f7"></i></div>
+                        <div class="item-inner">
+                          <div class="item-title">Хуки</div>
+						  <!--<div class="item-after"><span class="badge bg-green">NEW</span></div>-->
+                        </div>
+					  </div></a></li>
 				  <li><a href="graphic.html" class="item-link">
                       <div class="item-content">
                         <div class="item-media"><i class="icon icon-f7"></i></div>
                         <div class="item-inner">
                           <div class="item-title">Графические операторы</div>
-						  <div class="item-after"><span class="badge bg-green">NEW</span></div>
+						  <!--<div class="item-after"><span class="badge bg-green">NEW</span></div>-->
                         </div>
                   </div></a></li>
 				  <li><a href="math.html" class="item-link">
@@ -139,8 +124,32 @@
                         <div class="item-media"><i class="icon icon-f7"></i></div>
                         <div class="item-inner">
                           <div class="item-title">Математические функции</div>
-						  <div class="item-after"><span class="badge bg-green">NEW</span></div>
+						  <!--<div class="item-after"><span class="badge bg-green">NEW</span></div>-->
                         </div>
+					  </div></a></li>
+				  <li><a href="interface.html" class="item-link">
+					<div class="item-content">
+					  <div class="item-media"><i class="icon icon-f7"></i></div>
+					  <div class="item-inner">
+						<div class="item-title">Операторы интерфейса</div>
+						<div class="item-after"><span class="badge bg-green">NEW</span></div>
+					  </div>
+					</div></a></li>
+				  <li><a href="strings.html" class="item-link">
+					  <div class="item-content">
+						<div class="item-media"><i class="icon icon-f7"></i></div>
+						<div class="item-inner">
+						  <div class="item-title">Строковые функции</div>
+						  <div class="item-after"><span class="badge bg-green">NEW</span></div>
+						</div>
+					  </div></a></li>
+				  <li><a href="sound.html" class="item-link">
+					  <div class="item-content">
+						<div class="item-media"><i class="icon icon-f7"></i></div>
+						<div class="item-inner">
+						  <div class="item-title">Работа со звуком</div>
+						  <div class="item-after"><span class="badge bg-green">NEW</span></div>
+						</div>
 					  </div></a></li>
                 </ul>
               </div>
@@ -312,6 +321,8 @@ arg2 - второй аргумент</textarea>
           <ul>
             <li><a href="#" data-popup=".console-popup" class="list-button item-link open-popup close-popover">Консоль отладки</a></li>
             <li><a href="#" data-popup=".gendoc-popup" class="list-button item-link close-popover open-popup">Оформление документации</a></li>
+            <li><a href="#" class="list-button item-link">Скрытые разделы:</a></li>
+            <li><a href="start.html" class="list-button item-link close-popover">С чего начать</a></li>
           </ul>
         </div>
       </div>

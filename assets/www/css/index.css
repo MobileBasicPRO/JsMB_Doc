@@ -55,6 +55,7 @@ args{
 block{
   display:block;
   padding-left:6%;
+  font-family:"monospace";
 }
 
 var{
@@ -66,8 +67,18 @@ func{
   font-size:130%;
 }
 
+function{
+  color:rgb(0,220,220);
+}
+
 str{
-  color: #D06538;
+  /*color: #D06538;*/
+  color:rgb(255,128,128);
+}
+
+num{  
+  color:rgb(255,128,128);
+  font-weight:bold;
 }
 
 pre{
@@ -90,4 +101,9 @@ thead,
 tbody {
     border: 0 !important;
     background: transparent !important;
+}
+hr{
+  background:orange;
+  color:orange;
+  border-color:orange;
 }

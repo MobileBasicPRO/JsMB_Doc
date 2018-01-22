@@ -1,0 +1,82 @@
+<div data-page="about" class="page">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="left"><a href="index.html" class="back link icon-only"><i class="icon icon-back"></i></a></div>
+      <div class="center">Операторы интерфейса</div>
+	  <!--<div class="right"><a href="#" data-panel="right" class="link open-panel">#</a></div>-->
+    </div>
+  </div>
+  <div class="page-content">
+    <div class="content-block-title">Операторы интерфейса в JsMobileBasic</div>
+    <div class="content-block">
+	  <!--pre-->
+	  <oper>menuAdd<args>(menu,title,onclick)</args></oper>
+	  <info>Описание:</info>
+	  <block>Добавляет пункт <var>title</var> в меню <var>menu</var>; при нажатии выполнится функция <var>onclick</var></block>
+	  <info>Параметры:</info>
+	  <block>
+		menu: имя меню, string;<br/>
+	  	title: текст пункта меню, string<br/>
+	  	onclick: функция при нажатии, function<br/></block>
+	  <info>Возвращаемое значение:</info> <block><orange>true</orange></block>
+	  <info>Пример использования:</info>
+	  <block>menuAdd("file","Открыть файл",open());</block>
+
+	  <oper>menuAddSeparator<args>(menu)</args></oper>
+	  <info>Описание:</info>
+	  <block>Добавляет разделитель в меню <var>menu</var>.</block>
+	  <info>Параметры:</info>
+	  <block>
+		menu: имя меню, string;<br/></block>
+	  <info>Возвращаемое значение:</info> <block><orange>true</orange></block>
+	  <info>Пример использования:</info>
+	  <block>menuAddSeparator("file");</block>
+	  
+	  <oper>menuShow<args>(menu,x,y)</args></oper>
+	  <info>Описание:</info>
+	  <block>Отображает меню <var>menu</var> по координатам <var>x,y</var></block>
+	  <info>Параметры:</info>
+	  <block>
+		menu: имя меню, string;<br/>
+	  	x,y: координаты левого верхнего угла меню, px<br/></block>
+	  <info>Возвращаемое значение:</info> <block><orange>true</orange></block>
+	  <info>Пример использования:</info>
+	  <block>menuShow("file",100,100);</block>
+	  
+	  
+	  <oper>menuBarAdd<args>(bar,title,menu)</args></oper>
+	  <info>Описание:</info>
+	  <block>Добавляет пункт <var></var> в меню-бар <var>bar</var> при нажатии отобразится меню <var>menu</var></block>
+	  <info>Параметры:</info>
+	  <block>
+		bar: имя меню-бара, string;<br/>
+	  	title: текст пункта, function<br/>
+		menu: имя меню, string;<br/></block>
+	  <info>Возвращаемое значение:</info> <block><orange>true</orange></block>
+	  <info>Пример использования:</info>
+	  <block>menuBarAdd("main","Файл","file");</block>
+	  
+	  <oper>menuBarShow<args>(bar)</args></oper>
+	  <info>Описание:</info>
+	  <block>Выводит на экран меню-бар <var>bar</var> в меню-бар <var>bar</var></block>
+	  <info>Параметры:</info>
+	  <block>
+		bar: имя меню-бара, string;<br/></block>
+	  <info>Возвращаемое значение:</info> <block><orange>true</orange></block>
+	  <info>Пример использования:</info>
+	  <block>menuBarShow("main");</block>
+	  
+
+	  <oper>menuTrayAdd<args>(menu)</args></oper>
+	  <info>Описание:</info>
+	  <block>Добавляет меню в трей <var>tray</var></block>
+	  <info>Параметры:</info>
+	  <block>
+		menu: имя меню, string;<br/></block>
+	  <info>Возвращаемое значение:</info> <block><orange>true</orange></block>
+	  <info>Пример использования:</info>
+	  <block>menuShow("file",100,100);</block>
+	  
+    </div>
+  </div>
+</div>

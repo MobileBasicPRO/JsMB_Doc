@@ -1,0 +1,143 @@
+<div data-page="about" class="page">
+  <div ontouchmove="return false;" class="navbar">
+    <div class="navbar-inner">
+      <div class="left"><a href="index.html" class="back link icon-only"><i class="icon icon-back"></i></a></div>
+      <div class="center">Строковые функции</div>
+	  <!--<div class="right"><a href="#" data-panel="right" class="link open-panel">#</a></div>-->
+    </div>
+  </div>
+  <div class="page-content">
+    <div class="content-block-title">Строковые функции в JsMobileBasic</div>
+    <div class="content-block">	  
+<oper>len<args>(str)</args></oper>
+
+<info>Описание:</info><block> Возвращает длину строки <var>str</var>.</block>
+<info>Параметры:</info>
+<block>
+	str: Строка.
+	</block>
+<info>Возвращаемое значение:</info> <block>длина строки str.</block>
+<info>Пример использования:</info>
+<block><var>a</var> = <coper>len</coper><carg>(<str>"Hello world"</str>)</carg>; <green>//a = 11</green></block>
+
+	  <oper>int<args>(str)</args></oper><br/>
+	  <oper>val<args>(str)</args></oper>
+
+	  <info>Описание:</info><block> Парсит число из строки <var>str</var>.</block>
+	  <info>Параметры:</info>
+	  <block>
+		str: Строка.
+	  </block>
+	  <info>Возвращаемое значение:</info> <block>число из строки str, или NaN.</block>
+	  <info>Пример использования:</info>
+	  <block><var>a</var> = <coper>int</coper><carg>(<str>"5"</str>)</carg>; <green>//a = 5</green><br/>
+		<var>a</var> = <coper>val</coper><carg>(<str>"100"</str>)</carg>; <green>//a = 100</green>
+	  </block>
+	  
+	  <oper>float<args>(str)</args></oper>
+
+	  <info>Описание:</info><block> Парсит дробь из строки str.</block>
+	  <info>Параметры:</info>
+	  <block>
+		str: Строка.
+	  </block>
+	  <info>Возвращаемое значение:</info> <block>десятичная дробь из строки str.</block>
+	  <info>Пример использования:</info>
+	  <block><var>a</var> = <coper>float</coper><carg>(<str>"10.54"</str>)</carg>; <green>//a = 10.54</green></block>
+	  
+	  <oper>upper<args>(str)</args></oper>
+
+	  <info>Описание:</info><block>Переводит строку <var>str</var> в верхний регистр.</block>
+	  <info>Параметры:</info>
+	  <block>
+		str: Строка.
+	  </block>
+	  <info>Возвращаемое значение:</info> <block>строка в верхнем регистре.</block>
+	  <info>Пример использования:</info>
+	  <block><var>a</var> = <coper>upper</coper><carg>(<str>"word"</str>)</carg>; <green>//a = "WORD"</green></block>
+
+<oper>lower<args>(str)</args></oper>
+
+	  <info>Описание:</info> <block>Переводит строку <var>str</var> в нижний регистр.</block>
+<info>Параметры:</info>
+<block>x, y: числа.</block>
+<info>Возвращаемое значение:</info><block>строка в нижнем регистре.</block>
+<info>Пример использования:</info>
+<block><var>a</var> = <coper>lower</coper><carg>(<str>"word"</str>)</carg>;<green>//a = "WORD"</green></block>
+
+<oper>split<args>(str, sym)</args></oper>
+
+<info>Описание:</info> <block>Разбивает строку <var>str</var> по символам <var>sym</var>.</block>
+<info>Параметры:</info>
+<block>str: Строка.<br/>
+  sym: Символ, строка
+</block>
+<info>Возвращаемое значение:</info> <block>массив символов.</block>
+<info>Пример использования:</info>
+<block><var>a</var> = <coper>split</coper><carg>(<str>"hello"</str>,<str>""</str>)</carg>;<green>//a = ["h","e","l","l","o"]</green></block>
+
+<oper>replace<args>(str,regexp,to)</args></oper>
+
+<info>Описание:</info> <block>Заменяет в строке символы по регулярному выражению <var>regexp</var> на <var>to</var>.</block>
+<info>Параметры:</info><block>
+str: Строка;<br/>
+regexp: Регулярное выражение;
+to: Замена, строка
+</block>
+<info>Возвращаемое значение:</info> <block>строка</block>
+<info>Пример использования:</info>
+<block><var>a</var> = <coper>replace</coper><carg>(<str>"Hello world!"</str>,<str>/world/g</str>,<str>"me"</str>)</carg>;<green>//a = "Hello me!"</green></block>
+
+<oper>mid</oper><args>(str, start, end)</args>
+
+<info>Описание:</info> <block>Вырезает строку в диапазоне от start до end.</block>
+<info>Параметры:</info>
+<block>str: строка;<br/>
+  start, end: числа.</block>
+<info>Возвращаемое значение:</info> <block>строка.</block>
+<info>Пример использования:</info><block>
+  <var>a</var>=<coper></coper><carg>(<str>"world"</str>,0,2)</carg>; <green>//a = "wo"</green>
+</block>
+
+<oper>char<args>(sym)</args></oper>
+
+<info>Описание:</info> <block>Возвращает код символа sym.</block>
+<info>Параметры:</info><block>
+sym: символ, строка.</block>
+<info>Возвращаемое значение:</info><block>код символа sym.</block>
+<info>Пример использования:</info>
+<block><var>a</var> = <coper>char</coper><carg>("h")</carg>;<green>//a = 256</green></block>
+
+<oper>asc<args>(char)</args></oper>
+
+<info>Описание:</info> <block>Bозвращает символ за его значением char.</block>
+<info>Параметры:</info><block>
+char: код символа, строка.</block>
+<info>Возвращаемое значение:</info> <block>Символ.</block>
+<info>Пример использования:</info>
+<block><var>a</var> = <coper>asc</coper><carg>("228")</carg>;<green>//a = ""</green></block>
+
+<!--
+<oper>acos<args>(x)</args></oper>
+
+<info>Описание:</info> <block>Bозвращает значение арккосинуса числа x в радианах (рад.).</block>
+<info>Параметры:</info><block>
+x: значение арккосинуса искомого угла.</block>
+<info>Возвращаемое значение:</info> <block>Aрккосинус числа x.</block>
+<info>Пример использования:</info>
+<block><var>a</var> = <coper>acos</coper><carg>(1)</carg>;<green>//a = 0</green></block>
+	  
+
+<oper>atan<args>(x)</args></oper>
+
+<info>Описание:</info> <block>Bозвращает значение арктангенса числа x в радианах (рад.).</block>
+<info>Параметры:</info><block>
+x: значение арктангенса искомого угла.</block>
+<info>Возвращаемое значение:</info> <block>Aрктангенс числа x.</block>
+<info>Пример использования:</info>
+<block><var>a</var> = <coper>atan</coper><carg>(0)</carg>;<green>//a = 0</green></block>
+-->
+</div>
+</div>
+</div>
+

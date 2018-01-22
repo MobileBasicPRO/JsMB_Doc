@@ -1,0 +1,70 @@
+
+<div data-page="about" class="page">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="left"><a href="index.html" class="back link icon-only"><i class="icon icon-back"></i></a></div>
+      <div class="center">С Mobile Basic в JsMobileBasic</div>
+    </div>
+  </div>
+  <div class="page-content">
+    <div class="content-block-title">Миграция с JsMobileBasic:</div>
+    <div class="content-block">
+	  <red>Этот раздел не дописан!</red>
+	  <info>Переменные</info>
+	  Mobile Basic:
+	  <block>
+	  A%=5;<br/>
+	  A$="String";<br/>
+	  A=5.5;
+	  </block>
+	  JsMobileBasic:
+	  <block>
+	  a=<num>5</num>;<br/>
+	  a=<str>"String"</str>;<br/>
+	  a=<num>5.5</num>;
+	  </block>
+	  
+	  <info>Условия</info>
+	  Mobile Basic:
+	  <block><function>IF</function> A%=<num>5</num> <function>THEN</function> CLS</block>
+	  JsMobileBasic:
+	  <block><function>if</function>(a == <num>5</num>){
+	  <block><coper>cls</coper><carg>()</carg>;</block>
+	  };</block>
+	  Mobile Basic:
+	  <block><function>IF</function> <var>A%</var>=<num>1</num> <function>THEN</function> <coper>PRINT</coper> <str>"true"</str><br/>
+	  <function>IF</function> <var>A%</var>=<num>0</num> <function>THEN</function> <coper>PRINT</coper> <str>"false"</str></block>
+	  JsMobileBasic:<block>
+	  <function>if</function>(a){
+	  <block><coper>println</coper><carg>(<str>"true"</str>)</carg>;</block>
+	  }else{
+	  <block><coper>println</coper><carg>(<str>"false"</str>)</carg>;</block>
+	  }
+	  </block>
+	  <info>Циклы</info>
+	  Mobile Basic:
+	  <block>
+		<function>FOR</function> I%=0 <function>TO</function> 100 <function>STEP</function> 5
+	  </block>
+	  JsMobileBasic:
+	  <block>
+		  <function>for</function>(i=<num>0</num>;i&lt;<num>100</num>;i+=<num>5</num>)
+	  </block>
+	  <info>Обработка событий</info>
+	  <p>Так, как в Mobile Basic была поддержка только клавиатуры телефона и использовалась простая система событий в виде функций, которые возвращали 1 при событии (FIRE(0)).<br/>
+		JsMobileBasic поддерживает все клавиши мыши и клавиатуры, по этому, для вашего удобства, мы изменили её.
+	  </p>
+	  MobileBasic:
+	  <block>
+		<function>IF</function> <coper>FIRE</coper><carg>(<str>0</str>)</carg> <function>THEN</function> ...
+	  </block>
+	  JsMobileBasic:
+	  <block>
+		<function>function</function> <coper>onKeyDown</coper><carg>(code)</carg>{<block>
+			<function>if</function>(code == <str>5</str>){<green>//Если нажат Enter</green><block>
+				<green>//...</green></block>
+			}</block>
+		}</block>
+	</div>
+  </div>
+</div>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Префикс: $Interface</title>
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+<div id="main">
+    <h1 class="page-title">Префикс: $Interface</h1>
+<section>
+<header>
+        <h2>$Interface</h2>
+</header>
+<article>
+    <div class="container-overview">
+            <div class="description">Модуль для работы с интерфейсом
+Поддерживает только JsMB-Interpreter и NW.JS</div>
+<dl class="details">
+    <dt class="tag-author">Автор:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li>PROPHESOR</li>
+        </ul>
+    </dd>
+</dl>
+    </div>
+        <h3 class="subsection-title">Операторы и функции</h3>
+    <!-- .menuAdd -->
+    <h4 class="name" id=".menuAdd"><oper>menuAdd<args>(name, title, onClick, type<span class="signature-attributes">opt</span>, fortype<span class="signature-attributes">opt</span>)</args></oper></h4>
+<info>Описание:</info>
+<div class="description">
+    <block>
+        Добавить пункт в контекстное меню
+    </block>
+</div>
+    <info>Параметры:</info>
+    <block>
+<table class="params">
+    <thead>
+    <tr>
+        <th>Название</th>
+        <th>Тип</th>
+        <th>Атрибуты</th>
+        <th class="last">Описание</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+                <td class="name"><code>name</code></td>
+            <td class="type">
+<span class="param-type">string</span>
+            </td>
+                <td class="attributes">
+                </td>
+            <td class="description last">ID название меню</td>
+        </tr>
+        <tr>
+                <td class="name"><code>title</code></td>
+            <td class="type">
+<span class="param-type">string</span>
+            </td>
+                <td class="attributes">
+                </td>
+            <td class="description last">Текст пункта меню</td>
+        </tr>
+        <tr>
+                <td class="name"><code>onClick</code></td>
+            <td class="type">
+<span class="param-type">function</span>
+            </td>
+                <td class="attributes">
+                </td>
+            <td class="description last">Функция выполнится при нажатии на пункт меню</td>
+        </tr>
+        <tr>
+                <td class="name"><code>type</code></td>
+            <td class="type">
+<span class="param-type">string</span>
+            </td>
+                <td class="attributes">
+                    &lt;опциональный><br>
+                </td>
+            <td class="description last">Тип меню (subMenu, checkbox, separator)</td>
+        </tr>
+        <tr>
+                <td class="name"><code>fortype</code></td>
+            <td class="type">
+<span class="param-type">string</span>
+            </td>
+                <td class="attributes">
+                    &lt;опциональный><br>
+                </td>
+            <td class="description last">Родительское меню для subMenu</td>
+        </tr>
+    </tbody>
+</table>
+    </block>
+<dl class="details">
+</dl>
+<h5>Возвращаемое значение:</h5>
+<dl>
+    <dt>Тип:
+<span class="param-type">this</span>
+</dt>
+</dl>
+    <!-- .menuShow -->
+    <h4 class="name" id=".menuShow"><oper>menuShow<args>(name, x, y)</args></oper></h4>
+<info>Описание:</info>
+<div class="description">
+    <block>
+        Отобразить контекстное меню
+    </block>
+</div>
+    <info>Параметры:</info>
+    <block>
+<table class="params">
+    <thead>
+    <tr>
+        <th>Название</th>
+        <th>Тип</th>
+        <th class="last">Описание</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+                <td class="name"><code>name</code></td>
+            <td class="type">
+<span class="param-type">string</span>
+            </td>
+            <td class="description last">ID название меню</td>
+        </tr>
+        <tr>
+                <td class="name"><code>x</code></td>
+            <td class="type">
+<span class="param-type">number</span>
+            </td>
+            <td class="description last">XY координата</td>
+        </tr>
+        <tr>
+                <td class="name"><code>y</code></td>
+            <td class="type">
+<span class="param-type">number</span>
+            </td>
+            <td class="description last">XY координата</td>
+        </tr>
+    </tbody>
+</table>
+    </block>
+<dl class="details">
+</dl>
+<h5>Возвращаемое значение:</h5>
+<dl>
+    <dt>Тип:
+<span class="param-type">this</span>
+</dt>
+</dl>
+    <!-- .menuAddSeparator -->
+    <h4 class="name" id=".menuAddSeparator"><oper>menuAddSeparator<args>(name)</args></oper></h4>
+<info>Описание:</info>
+<div class="description">
+    <block>
+        Добавляет разделитель в меню
+    </block>
+</div>
+    <info>Параметры:</info>
+    <block>
+<table class="params">
+    <thead>
+    <tr>
+        <th>Название</th>
+        <th>Тип</th>
+        <th class="last">Описание</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+                <td class="name"><code>name</code></td>
+            <td class="type">
+<span class="param-type">string</span>
+            </td>
+            <td class="description last">ID название меню</td>
+        </tr>
+    </tbody>
+</table>
+    </block>
+<dl class="details">
+</dl>
+<h5>Возвращаемое значение:</h5>
+<dl>
+    <dt>Тип:
+<span class="param-type">this</span>
+</dt>
+</dl>
+    <!-- .menuBarAdd -->
+    <h4 class="name" id=".menuBarAdd"><oper>menuBarAdd<args>(name, title, subMenu)</args></oper></h4>
+<info>Описание:</info>
+<div class="description">
+    <block>
+        Добавляет меню в меню-бар
+    </block>
+</div>
+    <info>Параметры:</info>
+    <block>
+<table class="params">
+    <thead>
+    <tr>
+        <th>Название</th>
+        <th>Тип</th>
+        <th class="last">Описание</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+                <td class="name"><code>name</code></td>
+            <td class="type">
+<span class="param-type">string</span>
+            </td>
+            <td class="description last">ID название меню-бара</td>
+        </tr>
+        <tr>
+                <td class="name"><code>title</code></td>
+            <td class="type">
+<span class="param-type">string</span>
+            </td>
+            <td class="description last">Заголовок меню</td>
+        </tr>
+        <tr>
+                <td class="name"><code>subMenu</code></td>
+            <td class="type">
+<span class="param-type">string</span>
+            </td>
+            <td class="description last">ID название меню</td>
+        </tr>
+    </tbody>
+</table>
+    </block>
+<dl class="details">
+</dl>
+<h5>Возвращаемое значение:</h5>
+<dl>
+    <dt>Тип:
+<span class="param-type">this</span>
+</dt>
+</dl>
+    <!-- .menuBarShow -->
+    <h4 class="name" id=".menuBarShow"><oper>menuBarShow<args>(name)</args></oper></h4>
+<info>Описание:</info>
+<div class="description">
+    <block>
+        Отобразить меню-бар на экране
+    </block>
+</div>
+    <info>Параметры:</info>
+    <block>
+<table class="params">
+    <thead>
+    <tr>
+        <th>Название</th>
+        <th>Тип</th>
+        <th class="last">Описание</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+                <td class="name"><code>name</code></td>
+            <td class="type">
+<span class="param-type">string</span>
+            </td>
+            <td class="description last">ID название меню-бара</td>
+        </tr>
+    </tbody>
+</table>
+    </block>
+<dl class="details">
+</dl>
+<h5>Возвращаемое значение:</h5>
+<dl>
+    <dt>Тип:
+<span class="param-type">this</span>
+</dt>
+</dl>
+    <!-- .getClipboard -->
+    <h4 class="name" id=".getClipboard"><oper>getClipboard<args>(type<span class="signature-attributes">opt</span>)</args></oper></h4>
+<info>Описание:</info>
+<div class="description">
+    <block>
+        Получить данные из буфера обмена
+    </block>
+</div>
+    <info>Параметры:</info>
+    <block>
+<table class="params">
+    <thead>
+    <tr>
+        <th>Название</th>
+        <th>Тип</th>
+        <th>Атрибуты</th>
+        <th>По умолчанию</th>
+        <th class="last">Описание</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+                <td class="name"><code>type</code></td>
+            <td class="type">
+<span class="param-type">string</span>
+            </td>
+                <td class="attributes">
+                    &lt;опциональный><br>
+                </td>
+                <td class="default">
+                    'text'
+                </td>
+            <td class="description last">Тип получаемых данных</td>
+        </tr>
+    </tbody>
+</table>
+    </block>
+<dl class="details">
+</dl>
+<h5>Возвращаемое значение:</h5>
+<dl>
+    <dt>Тип:
+<span class="param-type">string</span>
+</dt>
+</dl>
+    <!-- .setClipboard -->
+    <h4 class="name" id=".setClipboard"><oper>setClipboard<args>(value, type<span class="signature-attributes">opt</span>)</args></oper></h4>
+<info>Описание:</info>
+<div class="description">
+    <block>
+        Поместить данные в буфер обмена
+    </block>
+</div>
+    <info>Параметры:</info>
+    <block>
+<table class="params">
+    <thead>
+    <tr>
+        <th>Название</th>
+        <th>Тип</th>
+        <th>Атрибуты</th>
+        <th>По умолчанию</th>
+        <th class="last">Описание</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+                <td class="name"><code>value</code></td>
+            <td class="type">
+<span class="param-type">string</span>
+            </td>
+                <td class="attributes">
+                </td>
+                <td class="default">
+                </td>
+            <td class="description last">Данные для помещения</td>
+        </tr>
+        <tr>
+                <td class="name"><code>type</code></td>
+            <td class="type">
+<span class="param-type">string</span>
+            </td>
+                <td class="attributes">
+                    &lt;опциональный><br>
+                </td>
+                <td class="default">
+                    'text'
+                </td>
+            <td class="description last">Тип данных</td>
+        </tr>
+    </tbody>
+</table>
+    </block>
+<dl class="details">
+</dl>
+<h5>Возвращаемое значение:</h5>
+<dl>
+    <dt>Тип:
+<span class="param-type">this</span>
+</dt>
+</dl>
+    <!-- .clearClipboard -->
+    <h4 class="name" id=".clearClipboard"><oper>clearClipboard<args>()</args></oper></h4>
+<info>Описание:</info>
+<div class="description">
+    <block>
+        Очищает буфер обмена
+    </block>
+</div>
+<dl class="details">
+</dl>
+<h5>Возвращаемое значение:</h5>
+<dl>
+    <dt>Тип:
+<span class="param-type">this</span>
+</dt>
+</dl>
+    <!-- .menuTrayAdd -->
+    <h4 class="name" id=".menuTrayAdd"><oper>menuTrayAdd<args>(name<span class="signature-attributes">opt</span>, title, icon, menu)</args></oper></h4>
+<info>Описание:</info>
+<div class="description">
+    <block>
+        Добавить пункт в трэй
+    </block>
+</div>
+    <info>Параметры:</info>
+    <block>
+<table class="params">
+    <thead>
+    <tr>
+        <th>Название</th>
+        <th>Тип</th>
+        <th>Атрибуты</th>
+        <th class="last">Описание</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+                <td class="name"><code>name</code></td>
+            <td class="type">
+<span class="param-type">string</span>
+            </td>
+                <td class="attributes">
+                    &lt;опциональный><br>
+                </td>
+            <td class="description last">ID название трэя</td>
+        </tr>
+        <tr>
+                <td class="name"><code>title</code></td>
+            <td class="type">
+<span class="param-type">string</span>
+            </td>
+                <td class="attributes">
+                </td>
+            <td class="description last">Текст при удерживании мыши</td>
+        </tr>
+        <tr>
+                <td class="name"><code>icon</code></td>
+            <td class="type">
+<span class="param-type">string</span>
+            </td>
+                <td class="attributes">
+                </td>
+            <td class="description last">Иконка</td>
+        </tr>
+        <tr>
+                <td class="name"><code>menu</code></td>
+            <td class="type">
+<span class="param-type">string</span>
+            </td>
+                <td class="attributes">
+                </td>
+            <td class="description last">ID название открывающегося меню</td>
+        </tr>
+    </tbody>
+</table>
+    </block>
+<dl class="details">
+</dl>
+<h5>Возвращаемое значение:</h5>
+<dl>
+    <dt>Тип:
+<span class="param-type">this</span>
+</dt>
+</dl>
+    <!-- .fullScreen -->
+    <h4 class="name" id=".fullScreen"><oper>fullScreen<args>(mode)</args></oper></h4>
+<info>Описание:</info>
+<div class="description">
+    <block>
+        Переключить полноэкранный режим
+    </block>
+</div>
+    <info>Параметры:</info>
+    <block>
+<table class="params">
+    <thead>
+    <tr>
+        <th>Название</th>
+        <th>Тип</th>
+        <th class="last">Описание</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+                <td class="name"><code>mode</code></td>
+            <td class="type">
+<span class="param-type">bool</span>
+            </td>
+            <td class="description last">true - включить, false - отключить</td>
+        </tr>
+    </tbody>
+</table>
+    </block>
+<dl class="details">
+</dl>
+<h5>Возвращаемое значение:</h5>
+<dl>
+    <dt>Тип:
+<span class="param-type">this</span>
+</dt>
+</dl>
+</article>
+</section>
+</div>
+<nav>
+</nav>
+<br class="clear">
+</body>
+</html>

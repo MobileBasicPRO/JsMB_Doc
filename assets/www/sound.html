@@ -1,40 +1,126 @@
 <div data-page="about" class="page">
-  <div ontouchmove="return false;" class="navbar">
-    <div class="navbar-inner">
-      <div class="left"><a href="index.html" class="back link icon-only"><i class="icon icon-back"></i></a></div>
-      <div class="center">Работа со звуком</div>
-	  <!--<div class="right"><a href="#" data-panel="right" class="link open-panel">#</a></div>-->
-    </div>
-  </div>
-  <div class="page-content">
-    <div class="content-block-title">Работа со звуком в JsMobileBasic</div>
-    <div class="content-block">	  
-	  <oper>playSound<args>(file,loop, channel)</args></oper>
-
-	  <info>Описание:</info><block>Проигрывает звук <var>file</var> на канале <var>channel</var>.</block>
-	  <info>Параметры:</info>
-	  <block>
-		file: путь к файлу (поддерживает http), строка;<br/>
-		loop: повторение, bool;<br/>
-		channel: канал, number;
-	  </block>
-	  <info>Возвращаемое значение:</info> <block>true</block>
-	  <info>Пример использования:</info>
-	  <block><coper>playSound</coper><carg>(<str>"music.mp3"</str>, <bool>true</bool>, 1)</carg>; <green></green></block>
-
-	  <oper>pauseSound<args>(channel)</args></oper>
-
-	  <info>Описание:</info><block>Останавливает звук на канале <var>channel</var>.</block>
-	  <info>Параметры:</info>
-	  <block>
-		channel: канал, number
-	  </block>
-	  <info>Возвращаемое значение:</info> <block>число из строки str, или NaN.</block>
-	  <info>Пример использования:</info>
-	  <block><var>a</var> = <coper>int</coper><carg>(<str>"5"</str>)</carg>; <green>//a = 5</green><br/>
-		<var>a</var> = <coper>val</coper><carg>(<str>"100"</str>)</carg>; <green>//a = 100</green>
-	  </block>
+	<div ontouchmove="return false;" class="navbar">
+		<div class="navbar-inner">
+			<div class="left">
+				<a href="index.html" class="back link icon-only">
+					<i class="icon icon-back"></i>
+				</a>
+			</div>
+			<div class="center">Работа со звуком</div>
+			<!--<div class="right"><a href="#" data-panel="right" class="link open-panel">#</a></div>-->
+		</div>
 	</div>
-  </div>
+	<div class="page-content">
+		<div class="content-block-title">Работа со звуком в JsMobileBasic</div>
+		<div class="content-block">
+			<h4 class="name" id=".playSound">
+				<oper>playSound
+					<args>
+						<span class="signature">(file, loop, channel)</span>
+						<span class="type-signature"></span>
+					</args>
+				</oper>
+			</h4>
+			<info>Описание:</info>
+			<div class="description">
+				<block>
+					Играть звук
+				</block>
+			</div>
+			<info>Параметры:</info>
+			<block>
+				<table class="params">
+					<thead>
+						<tr>
+							<th>Название</th>
+							<th>Тип</th>
+							<th>По умолчанию</th>
+							<th class="last">Описание</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="name">
+								<code>file</code>
+							</td>
+							<td class="type">
+								<span class="param-type">string</span>
+							</td>
+							<td class="default">
+							</td>
+							<td class="description last">Файл звука</td>
+						</tr>
+						<tr>
+							<td class="name">
+								<code>loop</code>
+							</td>
+							<td class="type">
+								<span class="param-type">bool</span>
+							</td>
+							<td class="default">
+							</td>
+							<td class="description last">Зациклить?</td>
+						</tr>
+						<tr>
+							<td class="name">
+								<code>channel</code>
+							</td>
+							<td class="type">
+								<span class="param-type">string</span>
+							</td>
+							<td class="default">
+								0
+							</td>
+							<td class="description last">Канал</td>
+						</tr>
+					</tbody>
+				</table>
+			</block>
+			<dl class="details">
+			</dl>
+			<h4 class="name" id=".pauseSound">
+				<oper>pauseSound
+					<args>
+						<span class="signature">(channel)</span>
+						<span class="type-signature"></span>
+					</args>
+				</oper>
+			</h4>
+			<info>Описание:</info>
+			<div class="description">
+				<block>
+					Приостановить воспроизведение звука на канале
+				</block>
+			</div>
+			<info>Параметры:</info>
+			<block>
+				<table class="params">
+					<thead>
+						<tr>
+							<th>Название</th>
+							<th>Тип</th>
+							<th>По умолчанию</th>
+							<th class="last">Описание</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="name">
+								<code>channel</code>
+							</td>
+							<td class="type">
+								<span class="param-type">number</span>
+							</td>
+							<td class="default">
+								-1
+							</td>
+							<td class="description last">Канал (-1 для остановки на всех каналах)</td>
+						</tr>
+					</tbody>
+				</table>
+			</block>
+			<dl class="details">
+			</dl>
+		</div>
+	</div>
 </div>
-

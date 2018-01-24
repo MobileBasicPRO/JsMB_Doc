@@ -93,6 +93,15 @@ t{
   text-decoration:underline;
 }
 
+table,
+tr,
+th,
+td,
+thead,
+tbody {
+    border: 0 !important;
+    background: transparent !important;
+}
 hr{
   background:orange;
   color:orange;

@@ -1,4 +1,295 @@
 <div data-page="about" class="page">
+<<<<<<< HEAD
+	<div ontouchmove="return false;" class="navbar">
+		<div class="navbar-inner">
+			<div class="left">
+				<a href="index.html" class="back link icon-only">
+					<i class="icon icon-back"></i>
+				</a>
+			</div>
+			<div class="center">Работа с данными</div>
+			<!--<div class="right"><a href="#" data-panel="right" class="link open-panel">#</a></div>-->
+		</div>
+	</div>
+	<div class="page-content">
+		<div class="content-block-title">Работа с данными в JsMobileBasic</div>
+		<div class="content-block">
+			<!-- .localSaveData -->
+			<h4 class="name" id=".localSaveData">
+				<oper>localSaveData
+					<args>
+						<span class="signature">(name, _data)</span>
+						<span class="type-signature"></span>
+					</args>
+				</oper>
+			</h4>
+			<info>Описание:</info>
+			<div class="description">
+				<block>
+					Сохранить данные в хранилище
+				</block>
+			</div>
+			<info>Параметры:</info>
+			<block>
+				<table class="params">
+					<thead>
+						<tr>
+							<th>Название</th>
+							<th>Тип</th>
+							<th class="last">Описание</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="name">
+								<code>name</code>
+							</td>
+							<td class="type">
+								<span class="param-type">string</span>
+							</td>
+							<td class="description last">Название ячейки</td>
+						</tr>
+						<tr>
+							<td class="name">
+								<code>_data</code>
+							</td>
+							<td class="type">
+								<span class="param-type">*</span>
+							</td>
+							<td class="description last">Данные</td>
+						</tr>
+					</tbody>
+				</table>
+			</block>
+			<dl class="details">
+			</dl>
+			<!-- .localReadData -->
+			<h4 class="name" id=".localReadData">
+				<oper>localReadData
+					<args>
+						<span class="signature">(name)</span>
+						<span class="type-signature"></span>
+					</args>
+				</oper>
+			</h4>
+			<info>Описание:</info>
+			<div class="description">
+				<block>
+					Получить данные из хранилища
+				</block>
+			</div>
+			<info>Параметры:</info>
+			<block>
+				<table class="params">
+					<thead>
+						<tr>
+							<th>Название</th>
+							<th>Тип</th>
+							<th class="last">Описание</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="name">
+								<code>name</code>
+							</td>
+							<td class="type">
+								<span class="param-type">string</span>
+							</td>
+							<td class="description last">Название ячейки</td>
+						</tr>
+					</tbody>
+				</table>
+			</block>
+			<dl class="details">
+			</dl>
+			<!-- .parseJSON -->
+			<h4 class="name" id=".parseJSON">
+				<oper>parseJSON
+					<args>
+						<span class="signature">(json)</span>
+						<span class="type-signature"></span>
+					</args>
+				</oper>
+			</h4>
+			<info>Описание:</info>
+			<div class="description">
+				<block>
+					Возвращает объект из JSON строки
+				</block>
+			</div>
+			<info>Параметры:</info>
+			<block>
+				<table class="params">
+					<thead>
+						<tr>
+							<th>Название</th>
+							<th>Тип</th>
+							<th class="last">Описание</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="name">
+								<code>json</code>
+							</td>
+							<td class="type">
+								<span class="param-type">string</span>
+							</td>
+							<td class="description last">JSON строка</td>
+						</tr>
+					</tbody>
+				</table>
+			</block>
+			<dl class="details">
+			</dl>
+			<!-- .toJSON -->
+			<h4 class="name" id=".toJSON">
+				<oper>toJSON
+					<args>
+						<span class="signature">(object, f
+							<span class="signature-attributes">opt</span>, s
+							<span class="signature-attributes">opt</span>)</span>
+						<span class="type-signature"></span>
+					</args>
+				</oper>
+			</h4>
+			<info>Описание:</info>
+			<div class="description">
+				<block>
+					Возвращает JSON строку из объекта
+				</block>
+			</div>
+			<info>Параметры:</info>
+			<block>
+				<table class="params">
+					<thead>
+						<tr>
+							<th>Название</th>
+							<th>Тип</th>
+							<th>Атрибуты</th>
+							<th>По умолчанию</th>
+							<th class="last">Описание</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="name">
+								<code>object</code>
+							</td>
+							<td class="type">
+								<span class="param-type">object</span>
+							</td>
+							<td class="attributes">
+							</td>
+							<td class="default">
+							</td>
+							<td class="description last">Объект</td>
+						</tr>
+						<tr>
+							<td class="name">
+								<code>f</code>
+							</td>
+							<td class="type">
+								<span class="param-type">function</span>
+							</td>
+							<td class="attributes">
+								&lt;опциональный>
+								<br>
+							</td>
+							<td class="default">
+								null
+							</td>
+							<td class="description last">Дополнительный обработчик</td>
+						</tr>
+						<tr>
+							<td class="name">
+								<code>s</code>
+							</td>
+							<td class="type">
+								<span class="param-type">number</span>
+							</td>
+							<td class="attributes">
+								&lt;опциональный>
+								<br>
+							</td>
+							<td class="default">
+								4
+							</td>
+							<td class="description last">Отступ</td>
+						</tr>
+					</tbody>
+				</table>
+			</block>
+			<dl class="details">
+			</dl>
+			<!-- .toPSON -->
+			<h4 class="name" id=".toPSON">
+				<oper>toPSON
+					<args>
+						<span class="signature">(object, s
+							<span class="signature-attributes">opt</span>)</span>
+						<span class="type-signature"></span>
+					</args>
+				</oper>
+			</h4>
+			<info>Описание:</info>
+			<div class="description">
+				<block>
+					Возвращает PSON строку из объекта (с функциями)
+				</block>
+			</div>
+			<info>Параметры:</info>
+			<block>
+				<table class="params">
+					<thead>
+						<tr>
+							<th>Название</th>
+							<th>Тип</th>
+							<th>Атрибуты</th>
+							<th>По умолчанию</th>
+							<th class="last">Описание</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="name">
+								<code>object</code>
+							</td>
+							<td class="type">
+								<span class="param-type">object</span>
+							</td>
+							<td class="attributes">
+							</td>
+							<td class="default">
+							</td>
+							<td class="description last">Объект</td>
+						</tr>
+						<tr>
+							<td class="name">
+								<code>s</code>
+							</td>
+							<td class="type">
+								<span class="param-type">number</span>
+							</td>
+							<td class="attributes">
+								&lt;опциональный>
+								<br>
+							</td>
+							<td class="default">
+								4
+							</td>
+							<td class="description last">Отступ</td>
+						</tr>
+					</tbody>
+				</table>
+			</block>
+			<dl class="details">
+			</dl>
+		</div>
+	</div>
+</div>
+=======
   <div ontouchmove="return false;" class="navbar">
     <div class="navbar-inner">
       <div class="left"><a href="index.html" class="back link icon-only"><i class="icon icon-back"></i></a></div>
@@ -49,3 +340,4 @@
   </div>
 </div>
 
+>>>>>>> 2e0618d0668240e19302126063b7a794c51da76f

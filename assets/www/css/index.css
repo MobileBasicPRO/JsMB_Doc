@@ -98,3 +98,8 @@ hr{
   color:orange;
   border-color:orange;
 }
+
+.icon-f7 {
+	background-color: orange;
+	border-radius:20px !important;
+}
